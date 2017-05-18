@@ -1,0 +1,101 @@
+@using Microsoft.AspNetCore.Identity
+@using RVHD.Models
+
+@inject SignInManager<Member> SignInManager
+@inject UserManager<Member> UserManager
+
+    
+    <!-- If User Login Then Show -->
+
+<!-- Top Bar Start-->
+<div class="topBar">
+    <div class="row">
+        <div class="large-6 medium-6 columns">
+            <ul class="social left">
+                <li><a href="http://www.facebook.com/joinwebs"><i class="fa fa-facebook"></i></a></li>
+
+                <li><a href="http://www.twitter.com/joinwebs"><i class="fa fa-twitter"></i></a></li>
+
+                <li><a href="http://www.facebook.com/joinwebs"><i class="fa fa-google-plus"></i></a></li>
+
+                <li><a href="http://www.facebook.com/joinwebs"><i class="fa fa-pinterest-p"></i></a></li>
+
+                <li><a href="http://www.facebook.com/joinwebs"><i class="fa fa-linkedin"></i></a></li>
+
+                <li><a href="http://www.facebook.com/joinwebs"><i class="fa fa-instagram"></i></a></li>
+
+                <li><a href="http://www.facebook.com/joinwebs"><i class="fa fa-youtube"></i></a></li>
+
+                <li><a href="http://www.facebook.com/joinwebs"><i class="fa fa-vimeo-square"></i></a></li>
+
+            </ul>
+        </div>
+        <div class="large-6 medium-6 columns">
+            <!-- If User Login Then Show -->
+            @Html.Partial("_LoginPartial")
+        </div>
+    </div><!-- End ROW -->
+</div><!-- Top Bar End -->
+<!-- Section NAV BAr Start -->
+<section id="navBar">
+    <div class="contain-to-grid clearfix sticky">
+        <nav class="top-bar" data-topbar role="navigation" data-options="sticky_on: large">
+            <ul class="title-area">
+                <li class="name">
+                    <a href="http://demo.joinwebs.com/classiera">
+                        <img src="http://demo.joinwebs.com/classiera/wp-content/themes/classiera/images/logo.png" alt="Logo" />
+
+                    </a><!--End Logo -->
+                </li>
+                <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+            </ul>
+            <section class="top-bar-section">
+                <ul class="newAd right">
+@if (SignInManager.IsSignedIn(User)) {
+                    <li><a asp-controller="SubmitAd" asp-action="SelectCategory"><i class="fa fa-pencil-square-o"></i>Đăng tin</a></li>
+}
+else
+{
+                    <li><a asp-controller="Account" asp-action="login"><i class="fa fa-pencil-square-o"></i>Đăng tin</a></li>
+}
+
+                </ul>
+                <!--Auto Nav Start -->
+                <ul id="menu-top-menu" class="right">
+                    <li id="menu-item-143" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home current-menu-ancestor current-menu-parent menu-item-has-children active has-dropdown menu-item-143 active">
+                        <a href="http://demo.joinwebs.com/classiera/">Trang chủ</a>
+                        <ul class="sub-menu dropdown">
+                            <li id="menu-item-147" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-147"><a href="http://demo.joinwebs.com/classiera/home-page-v2/">Home Page V2</a></li>
+                            <li id="menu-item-148" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-148"><a href="http://demo.joinwebs.com/classiera/home-page-v3/">Home Page V3</a></li>
+                            <li id="menu-item-149" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-149"><a href="http://demo.joinwebs.com/classiera/homepage-v4/">HomePage V4</a></li>
+                            <li id="menu-item-8976" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8976"><a href="http://demo.joinwebs.com/classiera/homepage-v5/">HomePage v5</a></li>
+                            <li id="menu-item-8975" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8975"><a href="http://demo.joinwebs.com/classiera/homepage-v6/">HomePage V6</a></li>
+                            <li id="menu-item-150" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-150"><a href="http://demo.joinwebs.com/classiera/homepage-with-map/">HomePage With MAP</a></li>
+                            <li id="menu-item-809" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-809"><a href="http://demo.joinwebs.com/classiera/homepage-with-sidebar/">HomePage With Sidebar</a></li>
+                            <li id="menu-item-8974" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-8972 current_page_item active menu-item-8974 active"><a href="http://demo.joinwebs.com/classiera/landing-page/">Landing Page</a></li>
+                        </ul>
+                    </li>
+                    <li id="menu-item-144" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><a asp-controller="home" asp-action="about">Về chúng tôi</a></li>
+                    <li id="menu-item-151" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-151"><a asp-controller="pricingplan" asp-action="index">Pricing Plans</a></li>
+                    <li id="menu-item-145" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-145"><a asp-controller="category" asp-action="index">Danh mục</a></li>
+                    <li id="menu-item-273" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-273"><a asp-controller="blog" asp-action="index">Blog</a></li>
+                    <li id="menu-item-272" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children has-dropdown menu-item-272">
+                        <a href="#">Features</a>
+                        <ul class="sub-menu dropdown">
+                            <li id="menu-item-216" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-216"><a href="http://demo.joinwebs.com/classiera/all-ads/">All AdS</a></li>
+                            <li id="menu-item-404" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-404"><a href="http://demo.joinwebs.com/classiera/login-v2/">Login V2</a></li>
+                            <li id="menu-item-274" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-274"><a href="http://demo.joinwebs.com/classiera/coming-soon/">Coming Soon</a></li>
+                            <li id="menu-item-367" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-367"><a href="http://demo.joinwebs.com/classiera/left-sidebar/">Left Sidebar</a></li>
+                            <li id="menu-item-368" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-368"><a href="http://demo.joinwebs.com/classiera/fullwidth-page/">Fullwidth Page</a></li>
+                            <li id="menu-item-409" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-409"><a href="http://demo.joinwebs.com/classiera/notifications/">Notifications</a></li>
+                            <li id="menu-item-410" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-410"><a href="http://demo.joinwebs.com/classiera/faq/">FAQ</a></li>
+                        </ul>
+                    </li>
+                    <li id="menu-item-153" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-153"><a asp-controller="home" asp-action="Contact">Liên hệ</a></li>
+                    <li id="menu-item-153" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-153"><a asp-controller="faq" asp-action="index">FAQ</a></li>
+                </ul>
+                <!--Auto Nav End -->
+            </section><!--End Top Bar Section -->
+        </nav>
+    </div><!-- NAV ROW END -->
+</section><!-- Section NAV BAr END -->

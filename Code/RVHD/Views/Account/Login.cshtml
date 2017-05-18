@@ -1,0 +1,164 @@
+﻿@using System.Collections.Generic
+@using Microsoft.AspNetCore.Http
+@using Microsoft.AspNetCore.Http.Authentication
+@model LoginViewModel
+@inject SignInManager<Member> SignInManager
+
+@{
+    ViewData["Title"] = "Log in";
+}
+<section class="container" role="document">
+    <!-- page Heading -->
+
+    <section class="pageHeading" style="background:url(http://demo.joinwebs.com/classiera/wp-content/uploads/2015/12/inner-bg.png);">
+            <ul class="breadcrumb">
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Đăng nhập</a></li>
+            </ul>
+
+    </section><!-- End page Heading -->
+    <!-- advertisement -->
+    <section id="advertisement" class="noBorder removePad">
+        <div class="row">
+            <div class="large-6 columns loginborder-right">
+                <!--Social Login -->
+                <div class="row">
+                    <div class="large-8 large-centered columns">
+                        <div class="loginContent">
+                            <div class="loginLogo">
+                                <img src="http://demo.joinwebs.com/classiera/wp-content/themes/classiera/images/logo.png" alt="Logo" />
+                                <p>Bạn không có tài khoản? <a asp-controller="account" asp-action="register">Tạo một tài khoản.</a> Chỉ trong vòng 1 phút là xong</p>
+                                <span class="loginSep">HOẶC</span>
+                            </div>
+                            <div class="loginSocial">
+                                <h4>ĐĂNG NHẬP QUA MẠNG XÃ HỘI</h4>
+                                 @{
+                                var loginProviders = SignInManager.GetExternalAuthenticationSchemes().ToList();
+                                if (loginProviders.Count == 0)
+                                {
+                                    <div>
+                                        <p>
+                                            There are no external authentication services configured. See <a href="http://go.microsoft.com/fwlink/?LinkID=532715">this article</a>
+                                            for details on setting up this ASP.NET application to support logging in via external services.
+                                        </p>
+                                    </div>
+                                     }
+                                     else
+                                     {
+                                        <form asp-area="" asp-controller="Account" asp-action="ExternalLogin" @*asp-route-returnurl="@ViewData["ReturnUrl"]"*@ method="post" class="form-horizontal">
+                                            <div>
+                                                <p>
+                                                    @foreach (var provider in loginProviders)
+                                                    {
+                                                        switch (provider.DisplayName)
+                                                        {
+                                                            case "Facebook":
+                                                                <button type="submit" class="loginSocialbtn fb" name="provider" value="@provider.AuthenticationScheme" title="Log in using your @provider.DisplayName account"><i class="fa fa-facebook"></i>Đăng nhập qua Facebook</button>
+                                                                break;
+                                                        }
+
+                                                        @*<a class="loginSocialbtn twitter" href="http://demo.joinwebs.com/classiera/wp-login.php?loginTwitter=1" onclick="window.location = 'http://demo.joinwebs.com/classiera/wp-login.php?loginTwitter=1&redirect='+window.location.href; return false;"><i class="fa fa-twitter"></i>Login via Twitter</a>
+                                                        <a class="loginSocialbtn google" href="http://demo.joinwebs.com/classiera/wp-login.php?loginGoogle=1" onclick="window.location = 'http://demo.joinwebs.com/classiera/wp-login.php?loginGoogle=1&redirect='+window.location.href; return false;"><i class="fa fa-google-plus"></i>Login via Google</a>*@
+                                                    }
+                                                </p>
+                                            </div>
+                                        </form>
+                                     }
+                                }
+                                
+                                
+                                <!--AccessPress Socil Login-->
+                                <!--AccessPress Socil Login-->
+
+                            </div>          
+                        </div>
+                    </div>
+                </div>
+            </div><!-- End Social Login -->
+            <div class="large-6 columns">
+                <div class="row">
+                    <div class="large-8 large-centered columns">
+                        <div class="loginContent">
+                            <div class="loginHead">
+                                <h4>Đăng nhập</h4>
+                            </div>
+                            <form asp-controller="Account" asp-action="Login" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post" class="form-horizontal">
+                                
+                                <div asp-validation-summary="All" class="text-danger"></div>
+                                <div class="form-group">
+                                    <label asp-for="UserName" class="col-md-2 control-label"></label>
+                                    <div class="col-md-10">
+                                        <input asp-for="UserName" class="form-control" />
+                                        <span asp-validation-for="UserName" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Password" class="col-md-2 control-label"></label>
+                                    <div class="col-md-10">
+                                        <input asp-for="Password" class="form-control" />
+                                        <span asp-validation-for="Password" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-offset-2 col-md-10">
+                                        <div class="checkbox">
+                                            <label asp-for="RememberMe">
+                                                <input asp-for="RememberMe" />
+                                                @Html.DisplayNameFor(m => m.RememberMe)
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-offset-2 col-md-10">
+                                        <button type="submit" class="btn btn-default">Đăng nhập</button>
+                                    </div>
+                                </div>
+                                <br />
+                                <p>
+                                    <a asp-action="ForgotPassword">Quên mật khẩu?</a>
+                                </p>
+                            </form>
+                            @*<div class="loginSocial">
+                                <form class="form-item login-form" action="" id="myform" method="POST" enctype="multipart/form-data" data-abide>
+
+                                    <div class="inner-addon left-addon name-field">
+                                        <i class="icon fa fa-user"></i>
+                                        <input type="text" id="contactName" Placeholder="UserName" name="username" class="text input-textarea half" value="" />
+                                        <small class="error">Name is required and must be a string.</small>
+                                    </div><!-- End UserName Div -->
+                                    <div class="inner-addon left-addon password-field">
+                                        <i class="icon fa fa-unlock-alt"></i>
+                                        <input type="password" id="password" Placeholder="Password" name="password" class="text input-textarea half" value="" />
+                                        <small class="error">An password is required.</small>
+                                    </div><!-- End Password Div -->
+                                    <div class="checkbox">
+                                        <input id="remember" name="rememberme" type="checkbox" value="forever" style="float: left;" />
+                                        <label for="remember">Remember me</label>
+                                    </div><!-- End checkbox Div -->
+                                    <div class="row">
+                                        <div class="large-12 columns">
+                                            <div class="inner-addon left-addon">
+                                                <input type="hidden" id="submitbtn" name="submit" value="Login" />
+                                                <button class="button round btnfull form-submit" id="edit-submit" name="op" value="Login" type="submit">LOGIN NOW</button>
+                                            </div>
+                                            <p class="reset">
+                                                <a class="resetPass" href="">Forget Password?</a>
+                                            </p>
+                                        </div>
+                                    </div><!-- End LoginButton Div -->
+                                </form>
+                            </div>*@
+                            
+                        </div>
+                    </div>
+                </div>
+            </div><!-- End Custom Login Form -->
+        </div><!-- End Main Row -->
+    </section>
+    <!-- End advertisement -->
+
+</section>
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+                                                    }

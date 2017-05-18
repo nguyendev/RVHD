@@ -1,0 +1,62 @@
+@model RVHD.Models.AdsViewModels.CategoryViewModel
+@{
+    ViewData["Title"] = "Step1";
+    Layout = "~/Views/SubmitAd/_Layout.cshtml";
+}
+<div class="row">
+    <div class="large-12 medium-12 columns">
+        <div class="form-heading">
+            <p>Chọn danh mục</p>
+        </div>
+    </div><!--End Category Header -->
+    <form asp-area="" asp-controller="submitAd" asp-action="SelectCategory" method="get">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="large-4 medium-12 columns">
+            <div class="inner-addon left-addon">
+                <i class="icon fa fa-bars"></i>
+                <select asp-for="CategoriesId" name="category" id="category" lang="vi" onchange="this.form.submit()" required asp-items="@ViewBag.Category"></select>
+                <span asp-validation-for="CategoriesId" class="text-danger"></span>
+            </div>
+        </div><!--End Category DropDown -->
+        <div class="large-4 medium-12 columns">
+            <div class="inner-addon left-addon">
+                <i class="icon fa fa-bars"></i>
+                <select asp-for="CategoriesItemId" name="categoryItem" lang="vi" onchange="this.form.submit()" required asp-items="@ViewBag.CategoryItem"></select>
+                <span asp-validation-for="CategoriesItemId" class="text-danger"></span>
+            </div>
+        </div><!--End Sub-Category DropDown -->
+        <div class="large-4 medium-12 columns">
+            <div class="inner-addon left-addon">
+                <i class="icon fa fa-bars"></i>
+                <select asp-for="CategoriesSubItemId" name="categorySubItem" lang="vi" onchange="this.form.submit()" required asp-items="@ViewBag.CategorySubItem"></select>
+                <span asp-validation-for="CategoriesSubItemId" class="text-danger"></span>
+            </div>
+        </div><!--End Sub-Category DropDown -->
+    </form>
+    <br />
+    <form asp-area="" asp-controller="submitAd" asp-action="SelectCategory" method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+       <input asp-for="CategoriesId" value="getCategoriesId" disabled/>
+        <div class="large-12 medium-12 columns">
+            <label asp-for="CategoriesId"></label>/
+            <label asp-for="CategoriesItemId"></label>/
+            <label asp-for="CategoriesSubItemId"></label>
+            <span asp-validation-for="CategoriesSubItemId" class="text-danger"></span>
+        </div>
+        <span asp-validation-for="CategoriesId" class="text-danger"></span>
+        <span asp-validation-for="CategoriesItemId" class="text-danger"></span>
+        <span asp-validation-for="CategoriesSubItemId" class="text-danger"></span>
+        <div class="large-12 medium-12 columns">
+            <br />
+        </div>
+        <div class="large-12 medium-12 columns">
+            <button type="submit" class="btn btn-primary pull-right">Next</button>
+        </div>
+    </form>
+    <script>
+        $("#category").
+    </script>
+</div>
+
+@*<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+<script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>*@

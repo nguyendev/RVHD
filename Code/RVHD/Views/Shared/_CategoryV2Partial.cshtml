@@ -1,0 +1,64 @@
+
+<div class="row">
+    <!-- Categories Heading Row -->
+    <div class="mainHeading">
+        <div class="large-7 medium-8 large-centered medium-centered columns">
+            <h2>Ads categories</h2>
+            <p><span class="line"><i class="fa fa-circle"></i></span></p>
+            <p>Semper ac dolor vitae accumsan. Cras interdum hendrerit lacinia.Phasellusaccumsan urna vitae molestie interdum. Nam sed placerat libero, non eleifend dolor</p>
+        </div>
+    </div>
+</div><!-- Categories Heading Row -->
+<div class="row cat">
+    <!-- Categories Box Row -->
+    @*@if (0 == Model.Count() ) {
+            <h3>Không có danh mục nào. Xin vui lòng thêm vào</h3>
+        }
+        else {*@
+    @foreach (var item in ViewData["Category"] as List<RVHD.Models.CategoryViewModels.CategoryViewModel>)
+    {
+        <div class="large-3 medium-6 columns category end">
+            <div class="categoryBox">
+                <div style="border-top:2px solid @item.Color;" class="category-icon">
+                    <i class="@item.Icon" style="background-color: @item.Color"></i>
+                </div>
+
+                <div class="category-heading">
+                    <a asp-controller="" asp-action="">
+                        <h4>@item.CategoryName</h4>
+                    </a>
+                </div><!--categoryheading-->
+                <div class="categories" style="border-bottom:1px solid @item.Color;">
+                    <ul>
+                        @*@if (0==item.ListCategoryItems.Count) {
+                                <li>Không có danh mục con</li>
+                            }
+                            else
+                            {*@
+                        @foreach (var subitem in item.ListCategoryItems)
+                        {
+                            {
+                                ViewData["category"] = @item.Slug;
+                                ViewData["categorySub"] = @subitem.Slug;
+
+                            }
+
+                            <li>
+                                <a asp-controller="CategoryItem" asp-action="GetAds" asp-route-category="@item.Slug" asp-route-categorySub="@subitem.Slug" title="Xem tin đăng trong @subitem.Ci_Name">@subitem.Ci_Name									</a>
+                                <span class="category-counter">@subitem.ListCategorySubItems.Count</span>
+                            </li>
+                        }
+                        @*}*@
+                    </ul>
+                </div><!--categories-->
+                <div class="category-button">
+                    <a class="mas" href="http://demo.joinwebs.com/classiera/category/electronics/" onmouseover="this.style.backgroundColor='@item.Color'" onmouseout="this.style.backgroundColor='inherit'">VIEW ALL</a>
+                </div>
+            </div><!--categoryBox-->
+        </div><!--large3-->
+    }
+</div><!-- Categories Box ROW-->
+       
+<!-- Company Section Start-->
+
+<!-- Company Section End-->

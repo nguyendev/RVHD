@@ -1,0 +1,67 @@
+@model RVHD.Models.AdsViewModels.PriceViewModel
+@{
+    ViewData["Title"] = "Step2";
+    Layout = "~/Views/SubmitAd/_Layout.cshtml";
+}
+
+<h2>Step2</h2>
+<div class="row">
+    <form asp-area="" asp-controller="submitAd" asp-action="selectPrice" method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="large-12 medium-12 columns">
+            <div class="inner-addon left-addon">
+                <i class="icon fa fa-text-height"></i>
+                <input asp-for="AdTitle" type="text" id="postTitle" name="postTitle" placeholder="" size="60" maxlength="255" class="form-text required input-textarea half">
+                <span asp-validation-for="AdTitle" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="large-12 columns">
+            <div class="inner-addon left-addon">
+                <textarea asp-for="AdDes" id="AdDes"></textarea>
+                <span asp-validation-for="AdDes" class="text-danger"></span>
+            </div>
+        </div><!--End Text Editor Div -->
+        <div class="large-12 medium-12 columns">
+            <div class="inner-addon left-addon">
+                <i class="icon fa fa-tags"></i>
+                <input type="text" id="post_tags" name="post_tags" placeholder="Tags Example: ads, car, cat, business" size="12" maxlength="110" class="">
+            </div>
+        </div><!--End tags Div -->
+        <!--Price section-->
+        <div class="large-12 medium-12 columns">
+            <div class="form-heading">
+                <p>Thiết lập giá cả</p>
+            </div>
+        </div><!--End Price Heading -->
+        <div class="large-12 medium-12 columns">
+            <p style="margin-top:10px; margin-left:15px;">Mặc định giá trị tiền tệ đã là VND. Vì thế bạn chỉ cần điền số tiền vào là đủ Ex: 123.000</p>
+        </div>
+        <div class="large-6 medium-6 columns">
+            <div class="inner-addon left-addon">
+                <i class="icon fa fa-money"></i>
+                <input asp-for="AdPrice" type="text" id="post_price" name="post_price" placeholder="Sale Price" size="12" class="form-text input-textarea half">
+                <span asp-validation-for="AdPrice" class="text-danger"></span>
+            </div>
+        </div><!--End Price -->
+        <div class="large-6 medium-6 columns">
+            <div class="inner-addon left-addon">
+                <i class="icon fa fa-money"></i>
+                <input asp-for="AdOldPrice" type="text" id="post_old_price" name="post_old_price" placeholder="Regular Price" size="12" class="form-text input-textarea half">
+                <span asp-validation-for="AdOldPrice" class="text-danger"></span>
+            </div>
+        </div><!--End OLD Price -->
+        <div class="large-12 medium-12 columns">
+            <button type="submit" class="btn btn-primary pull-right">Next</button>
+        </div>
+    </form>
+</div>
+@section Scripts {
+<script src="~/lib/ckeditor/ckeditor.js"></script>
+<script src="~/lib/ckeditor/adapters/jquery.js"></script>
+<script>
+    jQuery(document).ready(function ($) {
+        $("#AdDes").ckeditor()
+    });
+        
+</script>
+}

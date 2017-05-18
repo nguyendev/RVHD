@@ -1,0 +1,124 @@
+@model RVHD.Models.Categories
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+<body>
+
+<form asp-action="Create">
+    <div class="form-horizontal">
+        <h4>Categories</h4>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="CategoryName" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="CategoryName" class="form-control" />
+                <span asp-validation-for="CategoryName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="CategoryDes" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="CategoryDes" class="form-control" />
+                <span asp-validation-for="CategoryDes" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Slug" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Slug" class="form-control" />
+                <span asp-validation-for="Slug" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Icon" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Icon" class="form-control" />
+                <span asp-validation-for="Icon" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Color" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Color" class="form-control" />
+                <span asp-validation-for="Color" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="OrderNo" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="OrderNo" class="form-control" />
+                <span asp-validation-for="OrderNo" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Auth_status" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Auth_status" class="form-control" />
+                <span asp-validation-for="Auth_status" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Notes" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Notes" class="form-control" />
+                <span asp-validation-for="Notes" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Create_DT" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Create_DT" class="form-control" />
+                <span asp-validation-for="Create_DT" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Record_Status" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Record_Status" class="form-control" />
+                <span asp-validation-for="Record_Status" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Checker_ID" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Checker_ID" class="form-control" />
+                <span asp-validation-for="Checker_ID" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Publish_DT" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Publish_DT" class="form-control" />
+                <span asp-validation-for="Publish_DT" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="AuthorId" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <select asp-for="AuthorId" class ="form-control" asp-items="ViewBag.AuthorId"></select>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+</body>
+</html>

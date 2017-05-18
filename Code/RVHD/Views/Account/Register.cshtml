@@ -1,0 +1,167 @@
+﻿@model RegisterViewModel
+@inject SignInManager<Member> SignInManager
+@{
+    ViewData["Title"] = "Register";
+}
+<section class="container" role="document">
+    <!-- page Heading -->
+    <section class="pageHeading" style="background:url(http://demo.joinwebs.com/classiera/wp-content/uploads/2015/12/inner-bg.png);">
+        <div class="row large-6">
+            <h3>Đăng ký</h3>
+            <p>Đăng ký tài khoản mới</p>
+        </div>
+    </section><!-- End page Heading -->
+
+    <section id="advertisement ">
+        <div class="row">
+            <div class="large-6 columns loginborder-right">
+                <div class="row">
+                    <div class="large-8 large-centered columns">
+                        <div class="loginContent ">
+                            <div class="loginLogo ">
+                                <img src="http://demo.joinwebs.com/classiera/wp-content/themes/classiera/images/logo.png" alt="Logo" />
+                                <p>Bạn đã có tài khoản? <a href="http://demo.joinwebs.com/classiera/login/">Đăng nhập ngay.</a> Chỉ tốn một phút thôi</p>
+                                <span class="loginSep">OR</span>
+                            </div><!--End Logo Section -->
+                            <div class="loginSocial ">
+                                <h4>ĐĂNG NHẬP QUA MẠNG XÃ HỘI</h4>
+                                @{
+                                    var loginProviders = SignInManager.GetExternalAuthenticationSchemes().ToList();
+                                    if (loginProviders.Count == 0)
+                                    {
+                                        <div>
+                                            <p>
+                                                There are no external authentication services configured. See <a href="http://go.microsoft.com/fwlink/?LinkID=532715">this article</a>
+                                                for details on setting up this ASP.NET application to support logging in via external services.
+                                            </p>
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <form asp-controller="Account" asp-action="ExternalLogin" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post" class="form-horizontal">
+                                            <div>
+                                                <p>
+                                                    @foreach (var provider in loginProviders)
+                                                    {
+                                                        switch (provider.DisplayName)
+                                                        {
+                                                            case "Facebook":
+
+                                                                <button type="submit" class="loginSocialbtn fb" name="provider" value="@provider.AuthenticationScheme" title="Log in using your @provider.DisplayName account"><i class="fa fa-facebook"></i>Đăng nhập qua Facebook</button>
+                                                                break;
+                                                        }
+
+                                                        @*<a class="loginSocialbtn twitter" href="http://demo.joinwebs.com/classiera/wp-login.php?loginTwitter=1" onclick="window.location = 'http://demo.joinwebs.com/classiera/wp-login.php?loginTwitter=1&redirect='+window.location.href; return false;"><i class="fa fa-twitter"></i>Login via Twitter</a>
+                                                            <a class="loginSocialbtn google" href="http://demo.joinwebs.com/classiera/wp-login.php?loginGoogle=1" onclick="window.location = 'http://demo.joinwebs.com/classiera/wp-login.php?loginGoogle=1&redirect='+window.location.href; return false;"><i class="fa fa-google-plus"></i>Login via Google</a>*@
+                                                    }
+                                                </p>
+                                            </div>
+                                        </form>
+                                    }
+                                }
+                            </div><!--End loginSocial -->
+                        </div>
+                    </div>
+                </div>
+            </div><!--End Social Register Section -->
+            <div class="large-6 columns loginborder ">
+                <div class="row">
+                    <div class="large-8 large-centered columns">
+                        <div class="loginContent ">
+                            <div class="loginHead">
+                                <h4>ĐĂNG KÝ</h4>
+                            </div>
+                            <div class="loginSocial ">
+                                <form asp-controller="Account" asp-action="Register" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post" class="form-horizontal">
+                                   
+                                    <div asp-validation-summary="All" class="text-danger"></div>
+                                    <div class="form-group">
+                                        <label asp-for="Username" class="col-md-2 control-label"></label>
+                                        <div class="col-md-10">
+                                            <input asp-for="Username" class="form-control" />
+                                            <span asp-validation-for="Username" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="FullName" class="col-md-2 control-label"></label>
+                                        <div class="col-md-10">
+                                            <input asp-for="FullName" class="form-control" />
+                                            <span asp-validation-for="FullName" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="Email" class="col-md-2 control-label"></label>
+                                        <div class="col-md-10">
+                                            <input asp-for="Email" class="form-control" />
+                                            <span asp-validation-for="Email" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="Password" class="col-md-2 control-label"></label>
+                                        <div class="col-md-10">
+                                            <input asp-for="Password" class="form-control" />
+                                            <span asp-validation-for="Password" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="ConfirmPassword" class="col-md-2 control-label"></label>
+                                        <div class="col-md-10">
+                                            <input asp-for="ConfirmPassword" class="form-control" />
+                                            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-offset-2 col-md-10">
+                                            <button type="submit" class="btn btn-default">Register</button>
+                                        </div>
+                                    </div>
+                                </form>
+                                @*<form data-abide novalidate id="myform" method="POST" enctype="multipart/form-data" asp-controller="Account" asp-action="Register" asp-route-returnurl="@ViewData["ReturnUrl"]">
+                                    <div asp-validation-summary="All" class="text-danger"></div>
+                                    <div class="inner-addon left-addon name-field">
+                                        <i class="icon fa fa-user"></i>
+                                        <input id="contactName" asp-for="Username"  required title="4 characters minimum" placeholder="User Name" type="text" name="username" class="text input-textarea half" value="" maxlength="30" required />
+                                        <small class="error">Name is required and must be a string.</small>
+                                    </div><!--End Name Input Div -->
+                                    <div class="inner-addon left-addon email-field">
+                                        <i class="icon fa fa-envelope"></i>
+                                        <input id="email" asp-for="Email" placeholder="Email Address" type="email" name="email" class="text input-textarea half" value="" maxlength="50" required />
+                                        <small class="error">Email is required ...</small>
+                                    </div><!--End Email Input Div -->
+                                    <div class="inner-addon left-addon password-field">
+                                        <i class="icon fa fa-unlock-alt"></i>
+                                        <input id="password" asp-for="Password"  pattern=".{6,}" required title="6 characters minimum" placeholder="Password" type="password" name="pwd" class="text input-textarea half" maxlength="15" value="" required />
+                                        <small class="error">An password is required.</small>
+                                    </div><!--End password Input Div -->
+                                    <div class="inner-addon left-addon password-confirmation-field">
+                                        <i class="icon fa fa-unlock-alt"></i>
+                                        <input id="passwordr" asp-for="ConfirmPassword" placeholder="Retype Password" type="password" name="confirm" class="text input-textarea half" maxlength="15" value="" required pattern="[a-zA-Z]+" data-equalto="password" />
+                                        <small class="error">The password did not match</small>
+                                    </div><!--End retype password Input Div -->
+                                    <div class="checkbox">
+                                        <input id="remember" type="checkbox" name="remember" value="forever" required>
+                                        <label for="remember">
+                                            By creating account you agree
+                                            to our&nbsp;<a class="termsA" href="" target="_blank">Terms And Conditions?</a>
+                                        </label>
+                                    </div><!--End Checkbox Div -->
+                                    <div class="row">
+                                        <div class="large-12 columns">
+                                            <div class="inner-addon left-addon">
+                                                <input type="hidden" name="submit" value="Register" id="submit" />
+                                                <button class="button round btnfull form-submit" @*id="edit-submit" name="op" value="Publish Ad" type="submit">Register</button>
+                                            </div>
+                                        </div>
+                                    </div><!--End Registor Button Div -->
+                                </form>*@
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--End Custom Register Section -->
+        </div>
+    </section>
+</section>
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}

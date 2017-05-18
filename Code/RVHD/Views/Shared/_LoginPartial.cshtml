@@ -1,0 +1,50 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using RVHD.Models
+
+@inject SignInManager<Member> SignInManager
+@inject UserManager<Member> UserManager
+
+    
+    <!-- If User Login Then Show -->
+@if (SignInManager.IsSignedIn(User))
+        {
+            //var userName = User.FindFirst("UserName");
+            var id = "nguyenk15";
+            <ul class="topRight right">
+            <li class="topBtn">
+                <a asp-controller="account" asp-action="Profile" asp-route-id="@id">
+                    <i class="fa fa-pencil-square"></i>
+                    <span>Tài khoản</span>
+                </a>
+            </li>
+            <li class="topBtn">
+                <form asp-area="" asp-controller="Account" asp-action="Logout" method="post">
+                    <button type="submit" style="    text-decoration: none;
+    padding: 0 12px;
+    background: #393939;
+    border-radius: 4px;
+    display: inline-block;
+    text-align: center;
+    line-height: 35px;
+    color: #ffffff;"><i class="fa fa-sign-in"></i><span>Đăng xuất</span></button>
+                </form>
+            </li>
+        </ul>
+}
+else
+{
+    <ul class="topRight right">
+        <li class="topBtn">
+            <a asp-controller="account" asp-action="register">
+                <i class="fa fa-pencil-square"></i>
+                <span>Đăng ký</span>
+            </a>
+        </li>
+        <li class="topBtn">
+            <a asp-controller="account" asp-action="login">
+                <i class="fa fa-sign-in"></i>
+                <span>Đăng nhập</span>
+            </a>
+        </li>
+    </ul>
+}

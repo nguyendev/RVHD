@@ -1,0 +1,65 @@
+<div class="row">
+    <div class="mainHeading">
+        <div class="large-6 medium-8 large-centered medium-centered columns">
+            <h4>Newsletter</h4>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys</p>
+        </div><!-- End large-6-->
+    </div><!-- End mainHeading-->
+</div><!-- End row-->
+<div class="row">
+    <div class="large-8 columns large-centered">
+        <div class="newsForm">
+
+
+            @*<script type="text/javascript">
+                //<![CDATA[
+                if (typeof newsletter_check !== "function") {
+                window.newsletter_check = function (f) {
+                    var re = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-]{1,})+\.)+([a-zA-Z0-9]{2,})+$/;
+                    if (!re.test(f.elements["ne"].value)) {
+                        alert("The email is not correct");
+                        return false;
+                    }
+                    for (var i=1; i<20; i++) {
+                    if (f.elements["np" + i] && f.elements["np" + i].required && f.elements["np" + i].value == "") {
+                        alert("");
+                        return false;
+                    }
+                    }
+                    if (f.elements["ny"] && !f.elements["ny"].checked) {
+                        alert("You must accept the privacy statement");
+                        return false;
+                    }
+                    return true;
+                }
+                }
+                //]]>
+                                    </script>*@
+
+            <div class="tnp tnp-subscription">
+                <form method="post" action="http://demo.joinwebs.com/classiera/?na=s" onsubmit="return newsletter_check(this)">
+
+                    <table cellspacing="0" cellpadding="3" border="0">
+
+                        <!-- email -->
+                        <tr>
+                            <th>Email</th>
+                            <td align="left"><input class="tnp-email" type="email" name="ne" size="30" required></td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2" class="tnp-td-submit">
+                                <input class="tnp-submit" type="submit" value="Subscribe" />
+                            </td>
+                        </tr>
+
+                    </table>
+                </form>
+            </div>
+            <!--<form method="post">
+                <input type="email" placeholder="Enter Your Email Address.."></input>
+                <button type="submit" name="submit">submit <i class="fa fa-paper-plane"></i></button>
+            </form><-->
+        </div>
+    </div>
+</div><!-- End row-->

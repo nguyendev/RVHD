@@ -1,0 +1,2155 @@
+@model RVHD.Models.AdsViewModels.SubmitAdViewModel
+<section class="container" role="document">
+
+    <section class="pageHeading" style="background:url(http://demo.joinwebs.com/classiera/wp-content/uploads/2015/12/inner-bg.png);">
+        <!-- page Heading -->
+        <div class="row">
+            <h3>Submit Ads</h3>
+            <p>Post Ads in Classiera</p>
+        </div>
+    </section><!-- End page Heading -->
+    <!-- advertisement -->
+    <section id="advertisement">
+        <div class="row">
+            <div class="large-8 medium-12 columns">
+                <!-- Ad submit -->
+                <section class="adSubmit boxPad">
+                    <div class="adHeading">
+                        <i class="fa fa-pencil-square-o"></i>
+                        <h4>ĐĂNG TIN MỚI</h4>
+                    </div><!--adHeading -->
+                    <div class="authorForm">
+                        <form class="form-item" action="" id="primaryPostForm" method="POST" enctype="multipart/form-data">
+                            <div class="row">
+                               
+                                <!--Price section-->
+                                <div class="large-12 medium-12 columns">
+                                    <div class="form-heading">
+                                        <p>Thông tin liên hệ</p>
+                                    </div>
+                                </div><!--End Phone -->
+                                <div class="large-6 medium-6 columns end">
+                                    <div class="inner-addon left-addon">
+                                        <i class="icon fa fa-phone"></i>
+                                        <input asp-for="AdOwnerPhone" type="tel" id="post_phone" name="post_phone" required placeholder="Phone Number" size="12" class="">
+                                    </div>
+                                    <p class="help-block">Số điện thoại giúp người mua dễ dàng liên hệ với bạn</p>
+                                </div><!--End Phone -->
+                               
+                                <!--CustomFieldsBy Plugin-->
+                                <!--CustomFieldsBy Plugin-->
+                                <!--Select Item Condition-->
+                                <div class="large-12 medium-12 columns">
+                                    <div class="form-heading">
+                                        <p>Select Item Condition</p>
+                                    </div>
+                                </div><!--End Item Type Heading -->
+                                <div class="large-12 medium-12 columns">
+                                    <div class="radio removeMargin removePad">
+                                        <input type="radio" id="brand-new" name="item-condition" value="new" checked>
+                                        <label class="item-type" for="brand-new">
+                                            Brand New
+                                        </label>
+                                        <input type="radio" name="item-condition" id="used" value="used">
+                                        <label class="item-type" for="used">Used</label>
+                                    </div>
+                                </div>
+                                <!--Select Item Condition-->
+                                <!--Custom Fields Start -->
+                                <div class="extraFields">
+                                    <div id="cat-87" class="wrap-content" style="display: none;">
+                                    </div>
+                                    <div id="cat-3" class="wrap-content" style="display: none;">
+                                    </div>
+                                    <div id="cat-17" class="wrap-content" style="display: none;">
+                                        <div class="large-12 medium-12 columns">
+                                            <div class="form-heading">
+                                                <p>Extra Fields For&nbsp;Computers And Laptops</p>
+                                            </div>
+                                        </div>
+                                        <div class="large-6 medium-6 columns end" id="cat-17">
+                                            <div class="inner-addon left-addon">
+                                                <i class="icon fa fa-pencil"></i>
+                                                <input type="hidden" class="custom_field" id="custom_field[1][0]" name="17custom_field[1][0]" value="Model" size="12">
+                                                <input type="text" class="custom_field custom_field_visible input-textarea" id="custom_field[1][1]" name="17custom_field[1][1]" onfocus="if(this.value=='Model')this.value='';" onblur="if(this.value=='')this.value='Model';" value="Model" size="12">
+                                            </div>
+                                        </div>
+                                        <div class="large-6 medium-6 columns end" id="cat-17">
+                                            <div class="inner-addon left-addon">
+                                                <i class="icon fa fa-caret-down"></i>
+                                                <input type="hidden" class="custom_field" id="custom_field[0][0]" name="17custom_field[0][0]" value="Brand" size="12">
+                                                <input type="hidden" class="custom_field" id="custom_field[0][2]" name="17custom_field[0][2]" value="dropdown" size="12">
+                                                <select class="optional_select" id="custom_field[0][1]" name="17custom_field[0][1]">
+                                                    <option>Brand</option>
+                                                    <option value="Apple">Apple</option>
+                                                    <option value=" Dell"> Dell</option>
+                                                    <option value=" HP"> HP</option>
+                                                    <option value=" Lenovo"> Lenovo</option>
+                                                    <option value=" Samsung"> Samsung</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="cat-14" class="wrap-content" style="display: none;">
+                                        <div class="large-12 medium-12 columns">
+                                            <div class="form-heading">
+                                                <p>Extra Fields For&nbsp;Birds</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="cat-22" class="wrap-content" style="display: none;">
+                                    </div>
+                                    <div id="cat-25" class="wrap-content" style="display: none;">
+                                    </div>
+                                    <div id="cat-30" class="wrap-content" style="display: none;">
+                                    </div>
+                                    <div id="cat-35" class="wrap-content" style="display: none;">
+                                        <div class="large-12 medium-12 columns">
+                                            <div class="form-heading">
+                                                <p>Extra Fields For&nbsp;Commercial &amp; Local</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="cat-40" class="wrap-content" style="display: none;">
+                                        <div class="large-12 medium-12 columns">
+                                            <div class="form-heading">
+                                                <p>Extra Fields For&nbsp;Classic &amp; Fancy</p>
+                                            </div>
+                                        </div>
+                                        <div class="large-6 medium-6 columns end" id="cat-40">
+                                            <div class="inner-addon left-addon">
+                                                <i class="icon fa fa-pencil"></i>
+                                                <input type="hidden" class="custom_field" id="custom_field[1][0]" name="40custom_field[1][0]" value="Model" size="12">
+                                                <input type="text" class="custom_field custom_field_visible input-textarea" id="custom_field[1][1]" name="40custom_field[1][1]" onfocus="if(this.value=='Model')this.value='';" onblur="if(this.value=='')this.value='Model';" value="Model" size="12">
+                                            </div>
+                                        </div>
+                                        <div class="large-6 medium-6 columns end" id="cat-40">
+                                            <div class="inner-addon left-addon">
+                                                <i class="icon fa fa-pencil"></i>
+                                                <input type="hidden" class="custom_field" id="custom_field[2][0]" name="40custom_field[2][0]" value="Year" size="12">
+                                                <input type="text" class="custom_field custom_field_visible input-textarea" id="custom_field[2][1]" name="40custom_field[2][1]" onfocus="if(this.value=='Year')this.value='';" onblur="if(this.value=='')this.value='Year';" value="Year" size="12">
+                                            </div>
+                                        </div>
+                                        <div class="large-6 medium-6 columns end" id="cat-40">
+                                            <div class="inner-addon left-addon">
+                                                <i class="icon fa fa-caret-down"></i>
+                                                <input type="hidden" class="custom_field" id="custom_field[0][0]" name="40custom_field[0][0]" value="Company" size="12">
+                                                <input type="hidden" class="custom_field" id="custom_field[0][2]" name="40custom_field[0][2]" value="dropdown" size="12">
+                                                <select class="optional_select" id="custom_field[0][1]" name="40custom_field[0][1]">
+                                                    <option>Company</option>
+                                                    <option value="Honda">Honda</option>
+                                                    <option value=" Toyota"> Toyota</option>
+                                                    <option value=" Suzuki"> Suzuki</option>
+                                                    <option value=" Hyndai"> Hyndai</option>
+                                                    <option value=" Mercedez"> Mercedez</option>
+                                                    <option value=" BMW"> BMW</option>
+                                                    <option value=" Telsa"> Telsa</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="cat-45" class="wrap-content" style="display: none;">
+                                    </div>
+                                    <div id="cat-53" class="wrap-content" style="display: none;">
+                                    </div>
+                                    <div id="cat-4" class="wrap-content" style="display: none;">
+                                    </div>
+                                    <div id="cat-15" class="wrap-content" style="display: none;">
+                                        <div class="large-12 medium-12 columns">
+                                            <div class="form-heading">
+                                                <p>Extra Fields For&nbsp;Cats</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="cat-18" class="wrap-content" style="display: none;">
+                                    </div>
+                                    <div id="cat-23" class="wrap-content" style="display: none;">
+                                    </div>
+                                    <div id="cat-26" class="wrap-content" style="display: none;">
+                                    </div>
+                                    <div id="cat-31" class="wrap-content" style="display: none;">
+                                        <div class="large-12 medium-12 columns">
+                                            <div class="form-heading">
+                                                <p>Extra Fields For&nbsp;Cleaning &amp; Washing</p>
+                                            </div>
+                                        </div>
+                                        <div class="large-6 medium-6 columns end" id="cat-31">
+                                            <div class="inner-addon left-addon">
+                                                <i class="icon fa fa-pencil"></i>
+                                                <input type="hidden" class="custom_field" id="custom_field[1][0]" name="31custom_field[1][0]" value="Time" size="12">
+                                                <input type="text" class="custom_field custom_field_visible input-textarea" id="custom_field[1][1]" name="31custom_field[1][1]" onfocus="if(this.value=='Time')this.value='';" onblur="if(this.value=='')this.value='Time';" value="Time" size="12">
+                                            </div>
+                                        </div>
+                                        <div class="large-6 medium-6 columns end" id="cat-31">
+                                            <div class="inner-addon left-addon">
+                                                <i class="icon fa fa-pencil"></i>
+                                                <input type="hidden" class="custom_field" id="custom_field[2][0]" name="31custom_field[2][0]" value="Duration" size="12">
+                                                <input type="text" class="custom_field custom_field_visible input-textarea" id="custom_field[2][1]" name="31custom_field[2][1]" onfocus="if(this.value=='Duration')this.value='';" onblur="if(this.value=='')this.value='Duration';" value="Duration" size="12">
+                                            </div>
+                                        </div>
+                                        <div class="large-6 medium-6 columns end" id="cat-31">
+                                            <div class="inner-addon left-addon">
+                                                <i class="icon fa fa-caret-down"></i>
+                                                <input type="hidden" class="custom_field" id="custom_field[0][0]" name="31custom_field[0][0]" value="Type" size="12">
+                                                <input type="hidden" class="custom_field" id="custom_field[0][2]" name="31custom_field[0][2]" value="dropdown" size="12">
+                                                <select class="optional_select" id="custom_field[0][1]" name="31custom_field[0][1]">
+                                                    <option>Type</option>
+                                                    <option value="Full Time">Full Time</option>
+                                                    <option value=" Part Time"> Part Time</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="large-6 medium-6 columns end" id="cat-31">
+                                            <div class="inner-addon left-addon">
+                                                <i class="icon fa fa-caret-down"></i>
+                                                <input type="hidden" class="custom_field" id="custom_field[3][0]" name="31custom_field[3][0]" value="Experience" size="12">
+                                                <input type="hidden" class="custom_field" id="custom_field[3][2]" name="31custom_field[3][2]" value="dropdown" size="12">
+                                                <select class="optional_select" id="custom_field[3][1]" name="31custom_field[3][1]">
+                                                    <option>Experience</option>
+                                                    <option value="1 Year">1 Year</option>
+                                                    <option value=" 2 Year"> 2 Year</option>
+                                                    <option value=" 3 Year"> 3 Year</option>
+                                                    <option value=" Fresh"> Fresh</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="cat-36" class="wrap-content" style="display: none;">
+                                        <div class="large-12 medium-12 columns">
+                                            <div class="form-heading">
+                                                <p>Extra Fields For&nbsp;Farms</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="cat-41" class="wrap-content" style="display: none;">
+                                        <div class="large-12 medium-12 columns">
+                                            <div class="form-heading">
+                                                <p>Extra Fields For&nbsp;Expensive Cars</p>
+                                            </div>
+                                        </div>
+                                        <div class="large-6 medium-6 columns end" id="cat-41">
+                                            <div class="inner-addon left-addon">
+                                                <i class="icon fa fa-pencil"></i>
+                                                <input type="hidden" class="custom_field" id="custom_field[1][0]" name="41custom_field[1][0]" value="Model" size="12">
+                                                <input type="text" class="custom_field custom_field_visible input-textarea" id="custom_field[1][1]" name="41custom_field[1][1]" onfocus="if(this.value=='Model')this.value='';" onblur="if(this.value=='')this.value='Model';" value="Model" size="12">
+                                            </div>
+                                        </div>
+                                        <div class="large-6 medium-6 columns end" id="cat-41">
+                                            <div class="inner-addon left-addon">
+                                                <i class="icon fa fa-pencil"></i>
+                                                <input type="hidden" class="custom_field" id="custom_field[2][0]" name="41custom_field[2][0]" value="Year" size="12">
+                                                <input type="text" class="custom_field custom_field_visible input-textarea" id="custom_field[2][1]" name="41custom_field[2][1]" onfocus="if(this.value=='Year')this.value='';" onblur="if(this.value=='')this.value='Year';" value="Year" size="12">
+                                            </div>
+                                        </div>
+                                        <div class="large-6 medium-6 columns end" id="cat-41">
+                                            <div class="inner-addon left-addon">
+                                                <i class="icon fa fa-caret-down"></i>
+                                                <input type="hidden" class="custom_field" id="custom_field[0][0]" name="41custom_field[0][0]" value="Company" size="12">
+                                                <input type="hidden" class="custom_field" id="custom_field[0][2]" name="41custom_field[0][2]" value="dropdown" size="12">
+                                                <select class="optional_select" id="custom_field[0][1]" name="41custom_field[0][1]">
+                                                    <option>Company</option>
+                                                    <option value="Honda">Honda</option>
+                                                    <option value=" Toyota"> Toyota</option>
+                                                    <option value=" Suzuki"> Suzuki</option>
+                                                    <option value=" Hyndai"> Hyndai</option>
+                                                    <option value=" Mercedez"> Mercedez</option>
+                                                    <option value=" BMW"> BMW</option>
+                                                    <option value=" Telsa"> Telsa</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="cat-46" class="wrap-content" style="display: none;">
+                                    </div>
+                                    <div id="cat-54" class="wrap-content" style="display: none;">
+                                    </div>
+                                    <div id="cat-5" class="wrap-content" style="display: none;">
+                                    </div>
+                                    <div id="cat-19" class="wrap-content" style="display: none;">
+                                        <div class="large-12 medium-12 columns">
+                                            <div class="form-heading">
+                                                <p>Extra Fields For&nbsp;Mobile &amp; Tablets</p>
+                                            </div>
+                                        </div>
+                                        <div class="large-6 medium-6 columns end" id="cat-19">
+                                            <div class="inner-addon left-addon">
+                                                <i class="icon fa fa-pencil"></i>
+                                                <input type="hidden" class="custom_field" id="custom_field[1][0]" name="19custom_field[1][0]" value="Model" size="12">
+                                                <input type="text" class="custom_field custom_field_visible input-textarea" id="custom_field[1][1]" name="19custom_field[1][1]" onfocus="if(this.value=='Model')this.value='';" onblur="if(this.value=='')this.value='Model';" value="Model" size="12">
+                                            </div>
+                                        </div>
+                                        <div class="large-6 medium-6 columns end" id="cat-19">
+                                            <div class="inner-addon left-addon">
+                                                <i class="icon fa fa-caret-down"></i>
+                                                <input type="hidden" class="custom_field" id="custom_field[0][0]" name="19custom_field[0][0]" value="Company" size="12">
+                                                <input type="hidden" class="custom_field" id="custom_field[0][2]" name="19custom_field[0][2]" value="dropdown" size="12">
+                                                <select class="optional_select" id="custom_field[0][1]" name="19custom_field[0][1]">
+                                                    <option>Company</option>
+                                                    <option value="iPhone">iPhone</option>
+                                                    <option value=" Nokia"> Nokia</option>
+                                                    <option value=" Oppo"> Oppo</option>
+                                                    <option value=" LG"> LG</option>
+                                                    <option value=" QMobile"> QMobile</option>
+                                                    <option value=" Sony"> Sony</option>
+                                                    <option value=" HTC"> HTC</option>
+                                                    <option value=" BlackBerry"> BlackBerry</option>
+                                                    <option value=" Sony Ericsson"> Sony Ericsson</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="cat-24" class="wrap-content" style="display: none;">
+                                        <div class="large-12 medium-12 columns">
+                                            <div class="form-heading">
+                                                <p>Extra Fields For&nbsp;Grooms</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="cat-27" class="wrap-content" style="display: none;">
+                                    </div>
+                                    <div id="cat-32" class="wrap-content" style="display: none;">
+                                        <div class="large-12 medium-12 columns">
+                                            <div class="form-heading">
+                                                <p>Extra Fields For&nbsp;Data Entry</p>
+                                            </div>
+                                        </div>
+                                        <div class="large-6 medium-6 columns end" id="cat-32">
+                                            <div class="inner-addon left-addon">
+                                                <i class="icon fa fa-pencil"></i>
+                                                <input type="hidden" class="custom_field" id="custom_field[0][0]" name="32custom_field[0][0]" value="Time" size="12">
+                                                <input type="text" class="custom_field custom_field_visible input-textarea" id="custom_field[0][1]" name="32custom_field[0][1]" onfocus="if(this.value=='Time')this.value='';" onblur="if(this.value=='')this.value='Time';" value="Time" size="12">
+                                            </div>
+                                        </div>
+                                        <div class="large-6 medium-6 columns end" id="cat-32">
+                                            <div class="inner-addon left-addon">
+                                                <i class="icon fa fa-pencil"></i>
+                                                <input type="hidden" class="custom_field" id="custom_field[2][0]" name="32custom_field[2][0]" value="Duration" size="12">
+                                                <input type="text" class="custom_field custom_field_visible input-textarea" id="custom_field[2][1]" name="32custom_field[2][1]" onfocus="if(this.value=='Duration')this.value='';" onblur="if(this.value=='')this.value='Duration';" value="Duration" size="12">
+                                            </div>
+                                        </div>
+                                        <div class="large-6 medium-6 columns end" id="cat-32">
+                                            <div class="inner-addon left-addon">
+                                                <i class="icon fa fa-caret-down"></i>
+                                                <input type="hidden" class="custom_field" id="custom_field[1][0]" name="32custom_field[1][0]" value="Type" size="12">
+                                                <input type="hidden" class="custom_field" id="custom_field[1][2]" name="32custom_field[1][2]" value="dropdown" size="12">
+                                                <select class="optional_select" id="custom_field[1][1]" name="32custom_field[1][1]">
+                                                    <option>Type</option>
+                                                    <option value="Full Time">Full Time</option>
+                                                    <option value=" Part Time"> Part Time</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="large-6 medium-6 columns end" id="cat-32">
+                                            <div class="inner-addon left-addon">
+                                                <i class="icon fa fa-caret-down"></i>
+                                                <input type="hidden" class="custom_field" id="custom_field[3][0]" name="32custom_field[3][0]" value="Experience" size="12">
+                                                <input type="hidden" class="custom_field" id="custom_field[3][2]" name="32custom_field[3][2]" value="dropdown" size="12">
+                                                <select class="optional_select" id="custom_field[3][1]" name="32custom_field[3][1]">
+                                                    <option>Experience</option>
+                                                    <option value="1 Year">1 Year</option>
+                                                    <option value=" 2 Year"> 2 Year</option>
+                                                    <option value=" 3 Year"> 3 Year</option>
+                                                    <option value=" Fresh"> Fresh</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="cat-37" class="wrap-content" style="display: none;">
+                                    </div>
+                                    <div id="cat-42" class="wrap-content" style="display: none;">
+                                        <div class="large-12 medium-12 columns">
+                                            <div class="form-heading">
+                                                <p>Extra Fields For&nbsp;Heavy Vehicles</p>
+                                            </div>
+                                        </div>
+                                        <div class="large-6 medium-6 columns end" id="cat-42">
+                                            <div class="inner-addon left-addon">
+                                                <i class="icon fa fa-pencil"></i>
+                                                <input type="hidden" class="custom_field" id="custom_field[1][0]" name="42custom_field[1][0]" value="Model" size="12">
+                                                <input type="text" class="custom_field custom_field_visible input-textarea" id="custom_field[1][1]" name="42custom_field[1][1]" onfocus="if(this.value=='Model')this.value='';" onblur="if(this.value=='')this.value='Model';" value="Model" size="12">
+                                            </div>
+                                        </div>
+                                        <div class="large-6 medium-6 columns end" id="cat-42">
+                                            <div class="inner-addon left-addon">
+                                                <i class="icon fa fa-pencil"></i>
+                                                <input type="hidden" class="custom_field" id="custom_field[2][0]" name="42custom_field[2][0]" value="Year" size="12">
+                                                <input type="text" class="custom_field custom_field_visible input-textarea" id="custom_field[2][1]" name="42custom_field[2][1]" onfocus="if(this.value=='Year')this.value='';" onblur="if(this.value=='')this.value='Year';" value="Year" size="12">
+                                            </div>
+                                        </div>
+                                        <div class="large-6 medium-6 columns end" id="cat-42">
+                                            <div class="inner-addon left-addon">
+                                                <i class="icon fa fa-caret-down"></i>
+                                                <input type="hidden" class="custom_field" id="custom_field[0][0]" name="42custom_field[0][0]" value="Company" size="12">
+                                                <input type="hidden" class="custom_field" id="custom_field[0][2]" name="42custom_field[0][2]" value="dropdown" size="12">
+                                                <select class="optional_select" id="custom_field[0][1]" name="42custom_field[0][1]">
+                                                    <option>Company</option>
+                                                    <option value="Honda">Honda</option>
+                                                    <option value=" Toyota"> Toyota</option>
+                                                    <option value=" Suzuki"> Suzuki</option>
+                                                    <option value=" Hyndai"> Hyndai</option>
+                                                    <option value=" Mercedez"> Mercedez</option>
+                                                    <option value=" BMW"> BMW</option>
+                                                    <option value=" Telsa"> Telsa</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="cat-47" class="wrap-content" style="display: none;">
+                                    </div>
+                                    <div id="cat-50" class="wrap-content" style="display: none;">
+                                        <div class="large-12 medium-12 columns">
+                                            <div class="form-heading">
+                                                <p>Extra Fields For&nbsp;Dogs</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="cat-55" class="wrap-content" style="display: none;">
+                                    </div>
+                                    <div id="cat-6" class="wrap-content" style="display: none;">
+                                    </div>
+                                    <div id="cat-20" class="wrap-content" style="display: none;">
+                                        <div class="large-12 medium-12 columns">
+                                            <div class="form-heading">
+                                                <p>Extra Fields For&nbsp;TV &amp; LCD</p>
+                                            </div>
+                                        </div>
+                                        <div class="large-6 medium-6 columns end" id="cat-20">
+                                            <div class="inner-addon left-addon">
+                                                <i class="icon fa fa-pencil"></i>
+                                                <input type="hidden" class="custom_field" id="custom_field[1][0]" name="20custom_field[1][0]" value="Color" size="12">
+                                                <input type="text" class="custom_field custom_field_visible input-textarea" id="custom_field[1][1]" name="20custom_field[1][1]" onfocus="if(this.value=='Color')this.value='';" onblur="if(this.value=='')this.value='Color';" value="Color" size="12">
+                                            </div>
+                                        </div>
+                                        <div class="large-6 medium-6 columns end" id="cat-20">
+                                            <div class="inner-addon left-addon">
+                                                <i class="icon fa fa-pencil"></i>
+                                                <input type="hidden" class="custom_field" id="custom_field[2][0]" name="20custom_field[2][0]" value="Model" size="12">
+                                                <input type="text" class="custom_field custom_field_visible input-textarea" id="custom_field[2][1]" name="20custom_field[2][1]" onfocus="if(this.value=='Model')this.value='';" onblur="if(this.value=='')this.value='Model';" value="Model" size="12">
+                                            </div>
+                                        </div>
+                                        <div class="large-6 medium-6 columns end" id="cat-20">
+                                            <div class="inner-addon left-addon">
+                                                <i class="icon fa fa-caret-down"></i>
+                                                <input type="hidden" class="custom_field" id="custom_field[0][0]" name="20custom_field[0][0]" value="Company" size="12">
+                                                <input type="hidden" class="custom_field" id="custom_field[0][2]" name="20custom_field[0][2]" value="dropdown" size="12">
+                                                <select class="optional_select" id="custom_field[0][1]" name="20custom_field[0][1]">
+                                                    <option>Company</option>
+                                                    <option value="LG">LG</option>
+                                                    <option value=" Sony"> Sony</option>
+                                                    <option value=" Samsung"> Samsung</option>
+                                                    <option value=" Orient"> Orient</option>
+                                                    <option value=" Haier"> Haier</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="cat-28" class="wrap-content" style="display: none;">
+                                    </div>
+                                    <div id="cat-33" class="wrap-content" style="display: none;">
+                                        <div class="large-12 medium-12 columns">
+                                            <div class="form-heading">
+                                                <p>Extra Fields For&nbsp;Design &amp; Code</p>
+                                            </div>
+                                        </div>
+                                        <div class="large-6 medium-6 columns end" id="cat-33">
+                                            <div class="inner-addon left-addon">
+                                                <i class="icon fa fa-pencil"></i>
+                                                <input type="hidden" class="custom_field" id="custom_field[0][0]" name="33custom_field[0][0]" value="Time" size="12">
+                                                <input type="text" class="custom_field custom_field_visible input-textarea" id="custom_field[0][1]" name="33custom_field[0][1]" onfocus="if(this.value=='Time')this.value='';" onblur="if(this.value=='')this.value='Time';" value="Time" size="12">
+                                            </div>
+                                        </div>
+                                        <div class="large-6 medium-6 columns end" id="cat-33">
+                                            <div class="inner-addon left-addon">
+                                                <i class="icon fa fa-pencil"></i>
+                                                <input type="hidden" class="custom_field" id="custom_field[2][0]" name="33custom_field[2][0]" value="Duration" size="12">
+                                                <input type="text" class="custom_field custom_field_visible input-textarea" id="custom_field[2][1]" name="33custom_field[2][1]" onfocus="if(this.value=='Duration')this.value='';" onblur="if(this.value=='')this.value='Duration';" value="Duration" size="12">
+                                            </div>
+                                        </div>
+                                        <div class="large-6 medium-6 columns end" id="cat-33">
+                                            <div class="inner-addon left-addon">
+                                                <i class="icon fa fa-caret-down"></i>
+                                                <input type="hidden" class="custom_field" id="custom_field[1][0]" name="33custom_field[1][0]" value="Type" size="12">
+                                                <input type="hidden" class="custom_field" id="custom_field[1][2]" name="33custom_field[1][2]" value="dropdown" size="12">
+                                                <select class="optional_select" id="custom_field[1][1]" name="33custom_field[1][1]">
+                                                    <option>Type</option>
+                                                    <option value="Full Time">Full Time</option>
+                                                    <option value=" Part Time"> Part Time</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="large-6 medium-6 columns end" id="cat-33">
+                                            <div class="inner-addon left-addon">
+                                                <i class="icon fa fa-caret-down"></i>
+                                                <input type="hidden" class="custom_field" id="custom_field[3][0]" name="33custom_field[3][0]" value="Experience" size="12">
+                                                <input type="hidden" class="custom_field" id="custom_field[3][2]" name="33custom_field[3][2]" value="dropdown" size="12">
+                                                <select class="optional_select" id="custom_field[3][1]" name="33custom_field[3][1]">
+                                                    <option>Experience</option>
+                                                    <option value="1 Year">1 Year</option>
+                                                    <option value=" 2 Year"> 2 Year</option>
+                                                    <option value=" 3 Year"> 3 Year</option>
+                                                    <option value=" Fresh"> Fresh</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="cat-38" class="wrap-content" style="display: none;">
+                                    </div>
+                                    <div id="cat-43" class="wrap-content" style="display: none;">
+                                        <div class="large-12 medium-12 columns">
+                                            <div class="form-heading">
+                                                <p>Extra Fields For&nbsp;Van &amp; Trucks</p>
+                                            </div>
+                                        </div>
+                                        <div class="large-6 medium-6 columns end" id="cat-43">
+                                            <div class="inner-addon left-addon">
+                                                <i class="icon fa fa-pencil"></i>
+                                                <input type="hidden" class="custom_field" id="custom_field[1][0]" name="43custom_field[1][0]" value="Model" size="12">
+                                                <input type="text" class="custom_field custom_field_visible input-textarea" id="custom_field[1][1]" name="43custom_field[1][1]" onfocus="if(this.value=='Model')this.value='';" onblur="if(this.value=='')this.value='Model';" value="Model" size="12">
+                                            </div>
+                                        </div>
+                                        <div class="large-6 medium-6 columns end" id="cat-43">
+                                            <div class="inner-addon left-addon">
+                                                <i class="icon fa fa-pencil"></i>
+                                                <input type="hidden" class="custom_field" id="custom_field[2][0]" name="43custom_field[2][0]" value="Year" size="12">
+                                                <input type="text" class="custom_field custom_field_visible input-textarea" id="custom_field[2][1]" name="43custom_field[2][1]" onfocus="if(this.value=='Year')this.value='';" onblur="if(this.value=='')this.value='Year';" value="Year" size="12">
+                                            </div>
+                                        </div>
+                                        <div class="large-6 medium-6 columns end" id="cat-43">
+                                            <div class="inner-addon left-addon">
+                                                <i class="icon fa fa-caret-down"></i>
+                                                <input type="hidden" class="custom_field" id="custom_field[0][0]" name="43custom_field[0][0]" value="Company" size="12">
+                                                <input type="hidden" class="custom_field" id="custom_field[0][2]" name="43custom_field[0][2]" value="dropdown" size="12">
+                                                <select class="optional_select" id="custom_field[0][1]" name="43custom_field[0][1]">
+                                                    <option>Company</option>
+                                                    <option value="Honda">Honda</option>
+                                                    <option value=" Toyota"> Toyota</option>
+                                                    <option value=" Suzuki"> Suzuki</option>
+                                                    <option value=" Hyndai"> Hyndai</option>
+                                                    <option value=" Mercedez"> Mercedez</option>
+                                                    <option value=" BMW"> BMW</option>
+                                                    <option value=" Telsa"> Telsa</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="cat-48" class="wrap-content" style="display: none;">
+                                    </div>
+                                    <div id="cat-51" class="wrap-content" style="display: none;">
+                                        <div class="large-12 medium-12 columns">
+                                            <div class="form-heading">
+                                                <p>Extra Fields For&nbsp;Fishes</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="cat-56" class="wrap-content" style="display: none;">
+                                    </div>
+                                    <div id="cat-7" class="wrap-content" style="display: none;">
+                                    </div>
+                                    <div id="cat-29" class="wrap-content" style="display: none;">
+                                    </div>
+                                    <div id="cat-34" class="wrap-content" style="display: none;">
+                                        <div class="large-12 medium-12 columns">
+                                            <div class="form-heading">
+                                                <p>Extra Fields For&nbsp;Finance Jobs</p>
+                                            </div>
+                                        </div>
+                                        <div class="large-6 medium-6 columns end" id="cat-34">
+                                            <div class="inner-addon left-addon">
+                                                <i class="icon fa fa-pencil"></i>
+                                                <input type="hidden" class="custom_field" id="custom_field[0][0]" name="34custom_field[0][0]" value="Time" size="12">
+                                                <input type="text" class="custom_field custom_field_visible input-textarea" id="custom_field[0][1]" name="34custom_field[0][1]" onfocus="if(this.value=='Time')this.value='';" onblur="if(this.value=='')this.value='Time';" value="Time" size="12">
+                                            </div>
+                                        </div>
+                                        <div class="large-6 medium-6 columns end" id="cat-34">
+                                            <div class="inner-addon left-addon">
+                                                <i class="icon fa fa-pencil"></i>
+                                                <input type="hidden" class="custom_field" id="custom_field[2][0]" name="34custom_field[2][0]" value="Duration" size="12">
+                                                <input type="text" class="custom_field custom_field_visible input-textarea" id="custom_field[2][1]" name="34custom_field[2][1]" onfocus="if(this.value=='Duration')this.value='';" onblur="if(this.value=='')this.value='Duration';" value="Duration" size="12">
+                                            </div>
+                                        </div>
+                                        <div class="large-6 medium-6 columns end" id="cat-34">
+                                            <div class="inner-addon left-addon">
+                                                <i class="icon fa fa-caret-down"></i>
+                                                <input type="hidden" class="custom_field" id="custom_field[1][0]" name="34custom_field[1][0]" value="Type" size="12">
+                                                <input type="hidden" class="custom_field" id="custom_field[1][2]" name="34custom_field[1][2]" value="dropdown" size="12">
+                                                <select class="optional_select" id="custom_field[1][1]" name="34custom_field[1][1]">
+                                                    <option>Type</option>
+                                                    <option value="Full Time">Full Time</option>
+                                                    <option value=" Part Time"> Part Time</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="large-6 medium-6 columns end" id="cat-34">
+                                            <div class="inner-addon left-addon">
+                                                <i class="icon fa fa-caret-down"></i>
+                                                <input type="hidden" class="custom_field" id="custom_field[3][0]" name="34custom_field[3][0]" value="Experience" size="12">
+                                                <input type="hidden" class="custom_field" id="custom_field[3][2]" name="34custom_field[3][2]" value="dropdown" size="12">
+                                                <select class="optional_select" id="custom_field[3][1]" name="34custom_field[3][1]">
+                                                    <option>Experience</option>
+                                                    <option value="1 Year">1 Year</option>
+                                                    <option value=" 2 Year"> 2 Year</option>
+                                                    <option value=" 3 Year"> 3 Year</option>
+                                                    <option value=" Fresh"> Fresh</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="cat-39" class="wrap-content" style="display: none;">
+                                        <div class="large-12 medium-12 columns">
+                                            <div class="form-heading">
+                                                <p>Extra Fields For&nbsp;Flats</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="cat-44" class="wrap-content" style="display: none;">
+                                        <div class="large-12 medium-12 columns">
+                                            <div class="form-heading">
+                                                <p>Extra Fields For&nbsp;Auto Parts</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="cat-49" class="wrap-content" style="display: none;">
+                                    </div>
+                                    <div id="cat-52" class="wrap-content" style="display: none;">
+                                        <div class="large-12 medium-12 columns">
+                                            <div class="form-heading">
+                                                <p>Extra Fields For&nbsp;Fancy Hens</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="cat-57" class="wrap-content" style="display: none;">
+                                        <div class="large-12 medium-12 columns">
+                                            <div class="form-heading">
+                                                <p>Extra Fields For&nbsp;Medical</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="cat-8" class="wrap-content" style="display: none;">
+                                    </div>
+                                    <div id="cat-9" class="wrap-content" style="display: none;">
+                                    </div>
+                                    <div id="cat-10" class="wrap-content" style="display: none;">
+                                    </div>
+                                    <div id="cat-21" class="wrap-content" style="display: none;">
+                                    </div>
+                                    <div id="cat-1" class="wrap-content" style="display: none;">
+                                    </div>
+                                    <!--End Custom Fields Start -->
+                                </div>
+                                <div class="large-12 medium-12 columns">
+                                    <div class="form-heading">
+                                        <p>Address</p>
+                                    </div>
+                                </div><!--End Address Heading-->
+                                <!--Country States City by Plugin-->
+                                <!--Select Location-->
+                                <div class="large-4 medium-4 columns">
+                                    <div class="inner-addon left-addon chooseSelect">
+                                        <i class="icon fa fa-map-marker"></i>
+                                        <select name="post_location" id="post_location" data-placeholder="Select Country" required>
+                                            <option selected disabled value="">Select Country</option>
+                                            <option value="635">Canada</option>
+                                            <option value="617">United States</option>
+                                            <option value="616">United Kingdom</option>
+                                            <option value="615">Pakistan</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <!--Select Location-->
+                                <!--Select States-->
+                                <div class="large-4 medium-4 columns">
+                                    <div class="inner-addon left-addon chooseSelect">
+                                        <i class="icon fa fa-map-marker"></i>
+                                        <select name="post_state" id="post_state" class="selectState" required>
+                                            <option value="">Select State</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <!--Select States-->
+                                <!--Select city-->
+                                <div class="large-4 medium-4 columns">
+                                    <div class="inner-addon left-addon chooseSelect">
+                                        <i class="icon fa fa-map-marker"></i>
+                                        <select name="post_city" id="post_city" class="selectCity" required>
+                                            <option value="">Select City</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <!--Select city-->
+                                <!--End  City Code -->
+                                <div class="large-4 medium-4 columns">
+                                    <div class="inner-addon left-addon">
+                                        <i class="icon fa fa-map-marker"></i>
+                                        <input id="address" name="address" type="text" placeholder="Address or City" class="input-textarea half" required>
+                                    </div>
+                                </div><!--End Address -->
+                                <div class="large-4 medium-4 columns">
+                                    <div class="inner-addon left-addon">
+                                        <i class="icon fa fa-map-marker"></i>
+
+                                        <input type="text" id="latitude" name="latitude" placeholder="Latitude" size="50" maxlength="50" class="form-text required input-textarea half">
+                                    </div>
+                                </div><!--End Latitude -->
+                                <div class="large-4 medium-4 columns">
+                                    <div class="inner-addon left-addon">
+                                        <i class="icon fa fa-map-marker"></i>
+
+                                        <input type="text" id="longitude" name="longitude" placeholder="Longitude" size="50" maxlength="50" class="form-text last required input-textarea half">
+                                    </div>
+                                </div><!--End Longitude -->
+                                <div class="clearfix"></div>
+                                <p class="help-block">Start typing an address  and select from the dropdown.</p>
+                                <!-- MAP Section Start-->
+                                <div class="large-12 medium-12 columns">
+                                    <div class="inner-addon left-addon submitMAp">
+                                        <div id="map-canvas"></div>
+                                        <script type="text/javascript">
+                                            jQuery(document).ready(function ($) {
+                                                var geocoder;
+                                                var map;
+                                                var marker;
+                                                var geocoder = new google.maps.Geocoder();
+                                                function geocodePosition(pos) {
+                                                    geocoder.geocode({
+                                                        latLng: pos
+                                                    }, function (responses) {
+                                                        if (responses && responses.length > 0) {
+                                                            updateMarkerAddress(responses[0].formatted_address);
+                                                        } else {
+                                                            updateMarkerAddress('Cannot determine address at this location.');
+                                                        }
+
+                                                    });
+
+                                                }
+
+                                                function updateMarkerPosition(latLng) {
+                                                    jQuery('#latitude').val(latLng.lat());
+                                                    jQuery('#longitude').val(latLng.lng());
+                                                }
+
+
+
+                                                function updateMarkerAddress(str) {
+                                                    jQuery('#address').val(str);
+                                                }
+
+
+
+                                                function initialize() {
+                                                    var latlng = new google.maps.LatLng(0, 0);
+                                                    var mapOptions = {
+                                                        zoom: 2,
+                                                        center: latlng
+                                                    }
+
+                                                    map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+                                                    geocoder = new google.maps.Geocoder();
+                                                    marker = new google.maps.Marker({
+                                                        position: latlng,
+                                                        map: map,
+                                                        draggable: true
+                                                    });
+                                                    // Add dragging event listeners.
+                                                    google.maps.event.addListener(marker, 'dragstart', function () {
+                                                        updateMarkerAddress('Dragging...');
+                                                    });
+
+                                                    google.maps.event.addListener(marker, 'drag', function () {
+                                                        updateMarkerPosition(marker.getPosition());
+                                                    });
+
+                                                    google.maps.event.addListener(marker, 'dragend', function () {
+                                                        geocodePosition(marker.getPosition());
+                                                    });
+                                                }
+
+
+
+                                                google.maps.event.addDomListener(window, 'load', initialize);
+                                                jQuery(document).ready(function () {
+
+                                                    initialize();
+
+                                                    jQuery(function () {
+                                                        jQuery("#address").autocomplete({
+                                                            //This bit uses the geocoder to fetch address values
+                                                            source: function (request, response) {
+                                                                geocoder.geocode({ 'address': request.term }, function (results, status) {
+                                                                    response(jQuery.map(results, function (item) {
+                                                                        return {
+                                                                            label: item.formatted_address,
+                                                                            value: item.formatted_address,
+                                                                            latitude: item.geometry.location.lat(),
+                                                                            longitude: item.geometry.location.lng()
+                                                                        }
+
+                                                                    }));
+
+                                                                })
+
+                                                            },
+
+                                                            //This bit is executed upon selection of an address
+
+                                                            select: function (event, ui) {
+                                                                jQuery("#latitude").val(ui.item.latitude);
+                                                                jQuery("#longitude").val(ui.item.longitude);
+                                                                var location = new google.maps.LatLng(ui.item.latitude, ui.item.longitude);
+                                                                marker.setPosition(location);
+                                                                map.setZoom(16);
+                                                                map.setCenter(location);
+                                                            }
+
+                                                        });
+
+                                                    });
+
+
+
+                                                    //Add listener to marker for reverse geocoding
+                                                    google.maps.event.addListener(marker, 'drag', function () {
+                                                        geocoder.geocode({ 'latLng': marker.getPosition() }, function (results, status) {
+                                                            if (status == google.maps.GeocoderStatus.OK) {
+                                                                if (results[0]) {
+                                                                    jQuery('#address').val(results[0].formatted_address);
+                                                                    jQuery('#latitude').val(marker.getPosition().lat());
+                                                                    jQuery('#longitude').val(marker.getPosition().lng());
+                                                                }
+
+                                                            }
+                                                        });
+                                                    });
+
+                                                });
+                                            });
+                                        </script>
+                                    </div>
+                                </div>
+                                <!-- MAP Section End-->
+                                <div class="large-12 medium-12 columns">
+                                    <div class="form-heading">
+                                        <p>Image And Video</p>
+                                    </div>
+                                </div><!-- Image Heading End-->
+                                <div class="large-12 medium-12 columns">
+                                    <div class="inputBtnSection inner-addon left-addon">
+                                        <p class="imgNotification">Please upload images one by one and then click on any Thumb to set as Featured image.</p>
+                                        <p class="limitIMG">You can upload&nbsp;3&nbsp;Images maximum.</p>
+                                        <!--<input id="upload-images-ad" type="file" name="upload_attachment[]" multiple />-->
+                                        <input name="image-count" type="hidden" value="3" />
+                                        <input name="upload_attachment[]" type="file" id="upload-images-ads" class="with-preview" maxlength="3" />
+                                        <input name="featured-image" id="fIMGcount" type="hidden" value="0" />
+
+                                        <script>
+                                            // wait for document to load
+                                            jQuery(function () {
+
+                                                // invoke plugin
+                                                jQuery('#upload-images-ads').MultiFile({
+                                                    onFileChange: function () {
+                                                        console.log('TEST CHANGE:', this, arguments);
+                                                    }
+                                                });
+
+                                            });
+                                        </script>
+                                    </div>
+                                </div><!-- Image Upload End-->
+                                <div class="large-12 medium-12 columns">
+                                    <div class="inner-addon left-addon">
+                                        <textarea name="video" id="video" cols="8" rows="5" placeholder="Put here iframe or video url."></textarea>
+                                        <label>Add iframe or video URL (iframe 710x400) (youtube, vimeo, etc)</label>
+                                    </div>
+                                </div><!-- Video Upload End-->
+                                <div class="large-12 medium-12 columns">
+                                    <div class="form-heading">
+                                        <p>Select Ads Type</p>
+                                    </div>
+                                </div><!-- End Package Heading-->
+                                <div class="large-12 medium-12 columns">
+                                    <div class="radio">
+
+                                        <p>
+                                            <input type="radio" id="edit-regular-plan" name="edit-feature-plan" value="" class="" checked>
+                                            <label class="" for="edit-regular-plan">Regular</label>
+                                            <input type="hidden" name="regular-ads-enable" value="">
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="large-12 medium-12 columns">
+                                    <input type="hidden" id="post_nonce_field" name="post_nonce_field" value="9b7753d5e9" /><input type="hidden" name="_wp_http_referer" value="/classiera/submit-ads/" />									<input type="hidden" name="submitted" id="submitted" value="true" />
+                                    <button class="btn button form-submit full-btn" id="edit-submit" name="op" value="Publish Ad" type="submit">Publish Ad</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div><!--authorForm -->
+                </section>
+            </div>
+
+            <!-- Sidebar Start -->
+            <div class="large-4 medium-12 columns">
+                <aside class="sidebar">
+                    <div class="row">
+                        <div class="large-12 medium-6 columns medium-centered">
+                            <div class="widgetBox">
+                                <h4>Advance Search</h4><div class="widgetContent">
+                                    <div class="advSearch">
+                                        <form action="http://demo.joinwebs.com/classiera" method="get" id="views-exposed-form-search-view-other-ads-page" accept-charset="UTF-8">
+                                            <input placeholder="Enter your Keyword" type="text" id="edit-search-api-views-fulltext" name="s" value="" size="30" maxlength="128" class="form-text">
+
+                                            <select id="edit-ad-location" name="post_location" class="form-select">
+                                                <option disabled="disabled" value="All" selected="selected">Location...</option>
+
+                                                <option value="Sutton">Sutton</option>
+                                                <option value="Balham">Balham</option>
+                                                <option value="Goldming">Goldming</option>
+                                                <option value="Farnham">Farnham</option>
+                                                <option value="Woking">Woking</option>
+                                                <option value=" Farnborough"> Farnborough</option>
+                                                <option value="Aldershot">Aldershot</option>
+                                                <option value="Guildford">Guildford</option>
+                                                <option value="Herne Hill">Herne Hill</option>
+                                                <option value="Edgware">Edgware</option>
+                                                <option value="Kennington">Kennington</option>
+                                                <option value="Forest Hill">Forest Hill</option>
+                                                <option value="Camden">Camden</option>
+                                                <option value="Pimlico">Pimlico</option>
+                                                <option value="Keston">Keston</option>
+                                                <option value="Bexley">Bexley</option>
+                                                <option value="Bexleyheath">Bexleyheath</option>
+                                                <option value="Waterloo">Waterloo</option>
+                                                <option value="Aldgate ">Aldgate </option>
+                                                <option value="Plaistow">Plaistow</option>
+                                                <option value="Cricklewood">Cricklewood</option>
+                                                <option value="Kilburn">Kilburn</option>
+                                                <option value="Horley">Horley</option>
+                                                <option value="Uxbridge">Uxbridge</option>
+                                                <option value="Battersea">Battersea</option>
+                                                <option value="Putney">Putney</option>
+                                                <option value="Bromley">Bromley</option>
+                                                <option value="Barnes">Barnes</option>
+
+
+                                            </select>
+
+                                            <select id="classieraCatAdvSearch" name="category_name" class="form-select">
+
+                                                <option value="All" selected="selected">Category.....</option>
+                                                <option value="electronics">Electronics</option>
+
+                                                <option value="computers-and-laptops" data-id="">- Computers And Laptops</option>
+                                                <option value="home-appliences" data-id="">- Home Appliences</option>
+                                                <option value="mobile-and-tablets" data-id="">- Mobile &amp; Tablets</option>
+                                                <option value="tv-and-lcd" data-id="">- TV &amp; LCD</option>
+
+                                                <option value="jobs">Jobs</option>
+
+                                                <option value="accounts-jobs" data-id="">- Accounts Jobs</option>
+                                                <option value="cleaning-washing" data-id="">- Cleaning &amp; Washing</option>
+                                                <option value="data-entry" data-id="">- Data Entry</option>
+                                                <option value="design-code" data-id="">- Design &amp; Code</option>
+                                                <option value="finance-jobs" data-id="">- Finance Jobs</option>
+
+                                                <option value="vehicles">Vehicles</option>
+
+                                                <option value="classic-fancy" data-id="">- Classic &amp; Fancy</option>
+                                                <option value="expensive-cars" data-id="">- Expensive Cars</option>
+                                                <option value="heavy-vehicles" data-id="">- Heavy Vehicles</option>
+                                                <option value="van-trucks" data-id="">- Van &amp; Trucks</option>
+                                                <option value="auto-parts" data-id="">- Auto Parts</option>
+
+                                                <option value="real-estate">Real Estate</option>
+
+                                                <option value="commercial-local" data-id="">- Commercial &amp; Local</option>
+                                                <option value="farms" data-id="">- Farms</option>
+                                                <option value="home-office" data-id="">- Home &amp; Office</option>
+                                                <option value="plaza-property" data-id="">- Plaza &amp; Property</option>
+                                                <option value="flats" data-id="">- Flats</option>
+
+                                                <option value="restaurants">Restaurants</option>
+
+                                                <option value="fast-food" data-id="">- Fast Food</option>
+                                                <option value="fine-dinning" data-id="">- Fine Dinning</option>
+                                                <option value="cafe-or-bistro" data-id="">- Cafe or Bistro</option>
+                                                <option value="fast-casual" data-id="">- Fast Casual</option>
+                                                <option value="burgers" data-id="">- Burgers</option>
+
+                                                <option value="pets">Pets</option>
+
+                                                <option value="birds" data-id="">- Birds</option>
+                                                <option value="cats" data-id="">- Cats</option>
+                                                <option value="dogs" data-id="">- Dogs</option>
+                                                <option value="fishes" data-id="">- Fishes</option>
+                                                <option value="fancy-hens" data-id="">- Fancy Hens</option>
+
+                                                <option value="services">Services</option>
+
+                                                <option value="photography" data-id="">- Photography</option>
+                                                <option value="cleaning-services" data-id="">- Cleaning Services</option>
+                                                <option value="educational" data-id="">- Educational</option>
+                                                <option value="food-services" data-id="">- Food Services</option>
+                                                <option value="home-office-removals" data-id="">- Home &amp; Office Removals</option>
+                                                <option value="medical" data-id="">- Medical</option>
+
+                                                <option value="hotel-travels">Hotel &amp; Travels</option>
+
+                                                <option value="hotels" data-id="">- Hotels</option>
+                                                <option value="tour-packages" data-id="">- Tour Packages</option>
+                                                <option value="events-nightlife" data-id="">- Events &amp; Nightlife</option>
+                                                <option value="music-brands" data-id="">- Music &amp; Brands</option>
+                                                <option value="clubs" data-id="">- Clubs</option>
+
+                                                <option value="matrimonials">Matrimonials</option>
+
+                                                <option value="brides" data-id="">- Brides</option>
+                                                <option value="casual-encounters" data-id="">- Casual Encounters</option>
+                                                <option value="grooms" data-id="">- Grooms</option>
+
+                                                <option value="uncategorized">Uncategorized</option>
+
+
+
+                                            </select>
+
+
+                                            <input type="text" name="geo-location" id="geo-location" value="off" data-default-value="off">
+
+                                            <input type="text" name="geo-radius-search" id="geo-radius-search" value="500" data-default-value="500">
+
+                                            <input type="text" name="geo-search-lat" id="geo-search-lat" value="0" data-default-value="0">
+
+                                            <input type="text" name="geo-search-lng" id="geo-search-lng" value="0" data-default-value="0">
+                                            <script type="text/javascript">
+                                                jQuery(document).ready(function (e) {
+                                                    jQuery("#classieraCatAdvSearch").change(function (e) {
+                                                        jQuery(".custom-field-cat").hide();
+                                                        jQuery(".autoHide").hide();
+                                                        jQuery(".custom-field-cat-" + jQuery(this).val()).show();
+                                                        jQuery(".hide-" + jQuery(this).val()).show();
+                                                    });
+                                                });
+                                            </script>
+                                            <!--End Text Type -->
+                                            <!--Start DropDown Type -->
+                                            <!--End DropDown Type -->
+                                            <!--Start Checkbox-->
+                                            <!--End Checkbox-->
+                                            <!--End Text Type -->
+                                            <!--Start DropDown Type -->
+                                            <!--End DropDown Type -->
+                                            <!--Start Checkbox-->
+                                            <!--End Checkbox-->
+                                            <div id="edit-search-api-views-fulltext-wrapper" class="views-exposed-widget views-widget-filter-search_api_views_fulltext custom-field-cat custom-field-cat-All custom-field-cat-computers-and-laptops" style="display:none;">
+                                                <div class="views-widget">
+                                                    <div class="control-group form-type-textfield form-item-search-api-views-fulltext form-item">
+                                                        <div class="controls">
+                                                            <select name="custom_fields[]" class="form-select autoHide hide-computers-and-laptops" style="display: none;">
+                                                                <option value="">Model...</option>
+                                                                <option value="E1-572G">E1-572G</option>
+                                                                <option value="2014">2014</option>
+                                                                <option value="Satellite">Satellite</option>
+                                                                <option value="sss">sss</option>
+                                                                <option value="Model">Model</option>
+                                                                <option value="S45">S45</option>
+                                                                <option value="Model">Model</option>
+                                                                <option value="assim assado">assim assado</option>
+                                                                <option value="Model">Model</option>
+                                                                <option value="mac">mac</option>
+                                                                <option value="Model">Model</option>
+                                                                <option value="samsung">samsung</option>
+                                                                <option value="test">test</option>
+                                                                <option value="Model">Model</option>
+                                                                <option value="latitured">latitured</option>
+                                                                <option value="Model">Model</option>
+                                                                <option value="Model">Model</option>
+                                                                <option value="Model">Model</option>
+                                                                <option value="Model">Model</option>
+                                                                <option value="DESD">DESD</option>
+                                                                <option value="new">new</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--End Text Type -->
+                                            <!--Start DropDown Type -->
+                                            <div id="edit-search-api-views-fulltext-wrapper" class="views-exposed-widget views-widget-filter-search_api_views_fulltext custom-field-cat custom-field-cat-All custom-field-cat-computers-and-laptops" style="display:none;">
+                                                <div class="views-widget">
+                                                    <div class="control-group form-type-textfield form-item-search-api-views-fulltext form-item">
+                                                        <div class="controls">
+                                                            <select name="custom_fields[]" class="form-select autoHide hide-computers-and-laptops" style="display: none;">
+                                                                <option value="">Brand...</option>
+                                                                <option value="Apple">Apple</option>
+                                                                <option value=" Dell"> Dell</option>
+                                                                <option value=" HP"> HP</option>
+                                                                <option value=" Lenovo"> Lenovo</option>
+                                                                <option value=" Samsung"> Samsung</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--End DropDown Type -->
+                                            <!--Start Checkbox-->
+                                            <!--End Checkbox-->
+                                            <!--End Text Type -->
+                                            <!--Start DropDown Type -->
+                                            <!--End DropDown Type -->
+                                            <!--Start Checkbox-->
+                                            <!--End Checkbox-->
+                                            <!--End Text Type -->
+                                            <!--Start DropDown Type -->
+                                            <!--End DropDown Type -->
+                                            <!--Start Checkbox-->
+                                            <!--End Checkbox-->
+                                            <!--End Text Type -->
+                                            <!--Start DropDown Type -->
+                                            <!--End DropDown Type -->
+                                            <!--Start Checkbox-->
+                                            <!--End Checkbox-->
+                                            <!--End Text Type -->
+                                            <!--Start DropDown Type -->
+                                            <!--End DropDown Type -->
+                                            <!--Start Checkbox-->
+                                            <!--End Checkbox-->
+                                            <!--End Text Type -->
+                                            <!--Start DropDown Type -->
+                                            <!--End DropDown Type -->
+                                            <!--Start Checkbox-->
+                                            <!--End Checkbox-->
+                                            <div id="edit-search-api-views-fulltext-wrapper" class="views-exposed-widget views-widget-filter-search_api_views_fulltext custom-field-cat custom-field-cat-All custom-field-cat-classic-fancy" style="display:none;">
+                                                <div class="views-widget">
+                                                    <div class="control-group form-type-textfield form-item-search-api-views-fulltext form-item">
+                                                        <div class="controls">
+                                                            <select name="custom_fields[]" class="form-select autoHide hide-classic-fancy" style="display: none;">
+                                                                <option value="">Model...</option>
+                                                                <option value="C-2014">C-2014</option>
+                                                                <option value="BK-2011">BK-2011</option>
+                                                                <option value="M-1965">M-1965</option>
+                                                                <option value="lancer">lancer</option>
+                                                                <option value="civic">civic</option>
+                                                                <option value="Model">Model</option>
+                                                                <option value="4454">4454</option>
+                                                                <option value="fgf">fgf</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="edit-search-api-views-fulltext-wrapper" class="views-exposed-widget views-widget-filter-search_api_views_fulltext custom-field-cat custom-field-cat-All custom-field-cat-classic-fancy" style="display:none;">
+                                                <div class="views-widget">
+                                                    <div class="control-group form-type-textfield form-item-search-api-views-fulltext form-item">
+                                                        <div class="controls">
+                                                            <select name="custom_fields[]" class="form-select autoHide hide-classic-fancy" style="display: none;">
+                                                                <option value="">Year...</option>
+                                                                <option value="2014">2014</option>
+                                                                <option value="2001">2001</option>
+                                                                <option value="1965">1965</option>
+                                                                <option value="2017">2017</option>
+                                                                <option value="2012">2012</option>
+                                                                <option value="Year">Year</option>
+                                                                <option value="34544">34544</option>
+                                                                <option value="2007">2007</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--End Text Type -->
+                                            <!--Start DropDown Type -->
+                                            <div id="edit-search-api-views-fulltext-wrapper" class="views-exposed-widget views-widget-filter-search_api_views_fulltext custom-field-cat custom-field-cat-All custom-field-cat-classic-fancy" style="display:none;">
+                                                <div class="views-widget">
+                                                    <div class="control-group form-type-textfield form-item-search-api-views-fulltext form-item">
+                                                        <div class="controls">
+                                                            <select name="custom_fields[]" class="form-select autoHide hide-classic-fancy" style="display: none;">
+                                                                <option value="">Company...</option>
+                                                                <option value="Honda">Honda</option>
+                                                                <option value=" Toyota"> Toyota</option>
+                                                                <option value=" Suzuki"> Suzuki</option>
+                                                                <option value=" Hyndai"> Hyndai</option>
+                                                                <option value=" Mercedez"> Mercedez</option>
+                                                                <option value=" BMW"> BMW</option>
+                                                                <option value=" Telsa"> Telsa</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--End DropDown Type -->
+                                            <!--Start Checkbox-->
+                                            <!--End Checkbox-->
+                                            <!--End Text Type -->
+                                            <!--Start DropDown Type -->
+                                            <!--End DropDown Type -->
+                                            <!--Start Checkbox-->
+                                            <!--End Checkbox-->
+                                            <!--End Text Type -->
+                                            <!--Start DropDown Type -->
+                                            <!--End DropDown Type -->
+                                            <!--Start Checkbox-->
+                                            <!--End Checkbox-->
+                                            <!--End Text Type -->
+                                            <!--Start DropDown Type -->
+                                            <!--End DropDown Type -->
+                                            <!--Start Checkbox-->
+                                            <!--End Checkbox-->
+                                            <!--End Text Type -->
+                                            <!--Start DropDown Type -->
+                                            <!--End DropDown Type -->
+                                            <!--Start Checkbox-->
+                                            <!--End Checkbox-->
+                                            <!--End Text Type -->
+                                            <!--Start DropDown Type -->
+                                            <!--End DropDown Type -->
+                                            <!--Start Checkbox-->
+                                            <!--End Checkbox-->
+                                            <!--End Text Type -->
+                                            <!--Start DropDown Type -->
+                                            <!--End DropDown Type -->
+                                            <!--Start Checkbox-->
+                                            <!--End Checkbox-->
+                                            <!--End Text Type -->
+                                            <!--Start DropDown Type -->
+                                            <!--End DropDown Type -->
+                                            <!--Start Checkbox-->
+                                            <!--End Checkbox-->
+                                            <div id="edit-search-api-views-fulltext-wrapper" class="views-exposed-widget views-widget-filter-search_api_views_fulltext custom-field-cat custom-field-cat-All custom-field-cat-cleaning-washing" style="display:none;">
+                                                <div class="views-widget">
+                                                    <div class="control-group form-type-textfield form-item-search-api-views-fulltext form-item">
+                                                        <div class="controls">
+                                                            <select name="custom_fields[]" class="form-select autoHide hide-cleaning-washing" style="display: none;">
+                                                                <option value="">Time...</option>
+                                                                <option value="10Am to 5PM">10Am to 5PM</option>
+                                                                <option value="Time">Time</option>
+                                                                <option value="all tme">all tme</option>
+                                                                <option value="asd">asd</option>
+                                                                <option value="Hh">Hh</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="edit-search-api-views-fulltext-wrapper" class="views-exposed-widget views-widget-filter-search_api_views_fulltext custom-field-cat custom-field-cat-All custom-field-cat-cleaning-washing" style="display:none;">
+                                                <div class="views-widget">
+                                                    <div class="control-group form-type-textfield form-item-search-api-views-fulltext form-item">
+                                                        <div class="controls">
+                                                            <select name="custom_fields[]" class="form-select autoHide hide-cleaning-washing" style="display: none;">
+                                                                <option value="">Duration...</option>
+                                                                <option value="7 Hours">7 Hours</option>
+                                                                <option value="Duration">Duration</option>
+                                                                <option value="12">12</option>
+                                                                <option value="Duration">Duration</option>
+                                                                <option value="Ggg">Ggg</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--End Text Type -->
+                                            <!--Start DropDown Type -->
+                                            <div id="edit-search-api-views-fulltext-wrapper" class="views-exposed-widget views-widget-filter-search_api_views_fulltext custom-field-cat custom-field-cat-All custom-field-cat-cleaning-washing" style="display:none;">
+                                                <div class="views-widget">
+                                                    <div class="control-group form-type-textfield form-item-search-api-views-fulltext form-item">
+                                                        <div class="controls">
+                                                            <select name="custom_fields[]" class="form-select autoHide hide-cleaning-washing" style="display: none;">
+                                                                <option value="">Type...</option>
+                                                                <option value="Full Time">Full Time</option>
+                                                                <option value=" Part Time"> Part Time</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="edit-search-api-views-fulltext-wrapper" class="views-exposed-widget views-widget-filter-search_api_views_fulltext custom-field-cat custom-field-cat-All custom-field-cat-cleaning-washing" style="display:none;">
+                                                <div class="views-widget">
+                                                    <div class="control-group form-type-textfield form-item-search-api-views-fulltext form-item">
+                                                        <div class="controls">
+                                                            <select name="custom_fields[]" class="form-select autoHide hide-cleaning-washing" style="display: none;">
+                                                                <option value="">Experience...</option>
+                                                                <option value="1 Year">1 Year</option>
+                                                                <option value=" 2 Year"> 2 Year</option>
+                                                                <option value=" 3 Year"> 3 Year</option>
+                                                                <option value=" Fresh"> Fresh</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--End DropDown Type -->
+                                            <!--Start Checkbox-->
+                                            <!--End Checkbox-->
+                                            <!--End Text Type -->
+                                            <!--Start DropDown Type -->
+                                            <!--End DropDown Type -->
+                                            <!--Start Checkbox-->
+                                            <!--End Checkbox-->
+                                            <div id="edit-search-api-views-fulltext-wrapper" class="views-exposed-widget views-widget-filter-search_api_views_fulltext custom-field-cat custom-field-cat-All custom-field-cat-expensive-cars" style="display:none;">
+                                                <div class="views-widget">
+                                                    <div class="control-group form-type-textfield form-item-search-api-views-fulltext form-item">
+                                                        <div class="controls">
+                                                            <select name="custom_fields[]" class="form-select autoHide hide-expensive-cars" style="display: none;">
+                                                                <option value="">Model...</option>
+                                                                <option value="range">range</option>
+                                                                <option value="rober">rober</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="edit-search-api-views-fulltext-wrapper" class="views-exposed-widget views-widget-filter-search_api_views_fulltext custom-field-cat custom-field-cat-All custom-field-cat-expensive-cars" style="display:none;">
+                                                <div class="views-widget">
+                                                    <div class="control-group form-type-textfield form-item-search-api-views-fulltext form-item">
+                                                        <div class="controls">
+                                                            <select name="custom_fields[]" class="form-select autoHide hide-expensive-cars" style="display: none;">
+                                                                <option value="">Year...</option>
+                                                                <option value="1999">1999</option>
+                                                                <option value="1998">1998</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--End Text Type -->
+                                            <!--Start DropDown Type -->
+                                            <div id="edit-search-api-views-fulltext-wrapper" class="views-exposed-widget views-widget-filter-search_api_views_fulltext custom-field-cat custom-field-cat-All custom-field-cat-expensive-cars" style="display:none;">
+                                                <div class="views-widget">
+                                                    <div class="control-group form-type-textfield form-item-search-api-views-fulltext form-item">
+                                                        <div class="controls">
+                                                            <select name="custom_fields[]" class="form-select autoHide hide-expensive-cars" style="display: none;">
+                                                                <option value="">Company...</option>
+                                                                <option value="Honda">Honda</option>
+                                                                <option value=" Toyota"> Toyota</option>
+                                                                <option value=" Suzuki"> Suzuki</option>
+                                                                <option value=" Hyndai"> Hyndai</option>
+                                                                <option value=" Mercedez"> Mercedez</option>
+                                                                <option value=" BMW"> BMW</option>
+                                                                <option value=" Telsa"> Telsa</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--End DropDown Type -->
+                                            <!--Start Checkbox-->
+                                            <!--End Checkbox-->
+                                            <!--End Text Type -->
+                                            <!--Start DropDown Type -->
+                                            <!--End DropDown Type -->
+                                            <!--Start Checkbox-->
+                                            <!--End Checkbox-->
+                                            <!--End Text Type -->
+                                            <!--Start DropDown Type -->
+                                            <!--End DropDown Type -->
+                                            <!--Start Checkbox-->
+                                            <!--End Checkbox-->
+                                            <!--End Text Type -->
+                                            <!--Start DropDown Type -->
+                                            <!--End DropDown Type -->
+                                            <!--Start Checkbox-->
+                                            <!--End Checkbox-->
+                                            <div id="edit-search-api-views-fulltext-wrapper" class="views-exposed-widget views-widget-filter-search_api_views_fulltext custom-field-cat custom-field-cat-All custom-field-cat-mobile-and-tablets" style="display:none;">
+                                                <div class="views-widget">
+                                                    <div class="control-group form-type-textfield form-item-search-api-views-fulltext form-item">
+                                                        <div class="controls">
+                                                            <select name="custom_fields[]" class="form-select autoHide hide-mobile-and-tablets" style="display: none;">
+                                                                <option value="">Model...</option>
+                                                                <option value="2015">2015</option>
+                                                                <option value="2016">2016</option>
+                                                                <option value="Bgjhg">Bgjhg</option>
+                                                                <option value="X24">X24</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--End Text Type -->
+                                            <!--Start DropDown Type -->
+                                            <div id="edit-search-api-views-fulltext-wrapper" class="views-exposed-widget views-widget-filter-search_api_views_fulltext custom-field-cat custom-field-cat-All custom-field-cat-mobile-and-tablets" style="display:none;">
+                                                <div class="views-widget">
+                                                    <div class="control-group form-type-textfield form-item-search-api-views-fulltext form-item">
+                                                        <div class="controls">
+                                                            <select name="custom_fields[]" class="form-select autoHide hide-mobile-and-tablets" style="display: none;">
+                                                                <option value="">Company...</option>
+                                                                <option value="iPhone">iPhone</option>
+                                                                <option value=" Nokia"> Nokia</option>
+                                                                <option value=" Oppo"> Oppo</option>
+                                                                <option value=" LG"> LG</option>
+                                                                <option value=" QMobile"> QMobile</option>
+                                                                <option value=" Sony"> Sony</option>
+                                                                <option value=" HTC"> HTC</option>
+                                                                <option value=" BlackBerry"> BlackBerry</option>
+                                                                <option value=" Sony Ericsson"> Sony Ericsson</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--End DropDown Type -->
+                                            <!--Start Checkbox-->
+                                            <!--End Checkbox-->
+                                            <!--End Text Type -->
+                                            <!--Start DropDown Type -->
+                                            <!--End DropDown Type -->
+                                            <!--Start Checkbox-->
+                                            <!--End Checkbox-->
+                                            <!--End Text Type -->
+                                            <!--Start DropDown Type -->
+                                            <!--End DropDown Type -->
+                                            <!--Start Checkbox-->
+                                            <!--End Checkbox-->
+                                            <div id="edit-search-api-views-fulltext-wrapper" class="views-exposed-widget views-widget-filter-search_api_views_fulltext custom-field-cat custom-field-cat-All custom-field-cat-data-entry" style="display:none;">
+                                                <div class="views-widget">
+                                                    <div class="control-group form-type-textfield form-item-search-api-views-fulltext form-item">
+                                                        <div class="controls">
+                                                            <select name="custom_fields[]" class="form-select autoHide hide-data-entry" style="display: none;">
+                                                                <option value="">Time...</option>
+                                                                <option value="Time">Time</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="edit-search-api-views-fulltext-wrapper" class="views-exposed-widget views-widget-filter-search_api_views_fulltext custom-field-cat custom-field-cat-All custom-field-cat-data-entry" style="display:none;">
+                                                <div class="views-widget">
+                                                    <div class="control-group form-type-textfield form-item-search-api-views-fulltext form-item">
+                                                        <div class="controls">
+                                                            <select name="custom_fields[]" class="form-select autoHide hide-data-entry" style="display: none;">
+                                                                <option value="">Duration...</option>
+                                                                <option value="Duration">Duration</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--End Text Type -->
+                                            <!--Start DropDown Type -->
+                                            <div id="edit-search-api-views-fulltext-wrapper" class="views-exposed-widget views-widget-filter-search_api_views_fulltext custom-field-cat custom-field-cat-All custom-field-cat-data-entry" style="display:none;">
+                                                <div class="views-widget">
+                                                    <div class="control-group form-type-textfield form-item-search-api-views-fulltext form-item">
+                                                        <div class="controls">
+                                                            <select name="custom_fields[]" class="form-select autoHide hide-data-entry" style="display: none;">
+                                                                <option value="">Type...</option>
+                                                                <option value="Full Time">Full Time</option>
+                                                                <option value=" Part Time"> Part Time</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="edit-search-api-views-fulltext-wrapper" class="views-exposed-widget views-widget-filter-search_api_views_fulltext custom-field-cat custom-field-cat-All custom-field-cat-data-entry" style="display:none;">
+                                                <div class="views-widget">
+                                                    <div class="control-group form-type-textfield form-item-search-api-views-fulltext form-item">
+                                                        <div class="controls">
+                                                            <select name="custom_fields[]" class="form-select autoHide hide-data-entry" style="display: none;">
+                                                                <option value="">Experience...</option>
+                                                                <option value="1 Year">1 Year</option>
+                                                                <option value=" 2 Year"> 2 Year</option>
+                                                                <option value=" 3 Year"> 3 Year</option>
+                                                                <option value=" Fresh"> Fresh</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--End DropDown Type -->
+                                            <!--Start Checkbox-->
+                                            <!--End Checkbox-->
+                                            <!--End Text Type -->
+                                            <!--Start DropDown Type -->
+                                            <!--End DropDown Type -->
+                                            <!--Start Checkbox-->
+                                            <!--End Checkbox-->
+                                            <div id="edit-search-api-views-fulltext-wrapper" class="views-exposed-widget views-widget-filter-search_api_views_fulltext custom-field-cat custom-field-cat-All custom-field-cat-heavy-vehicles" style="display:none;">
+                                                <div class="views-widget">
+                                                    <div class="control-group form-type-textfield form-item-search-api-views-fulltext form-item">
+                                                        <div class="controls">
+                                                            <select name="custom_fields[]" class="form-select autoHide hide-heavy-vehicles" style="display: none;">
+                                                                <option value="">Model...</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="edit-search-api-views-fulltext-wrapper" class="views-exposed-widget views-widget-filter-search_api_views_fulltext custom-field-cat custom-field-cat-All custom-field-cat-heavy-vehicles" style="display:none;">
+                                                <div class="views-widget">
+                                                    <div class="control-group form-type-textfield form-item-search-api-views-fulltext form-item">
+                                                        <div class="controls">
+                                                            <select name="custom_fields[]" class="form-select autoHide hide-heavy-vehicles" style="display: none;">
+                                                                <option value="">Year...</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--End Text Type -->
+                                            <!--Start DropDown Type -->
+                                            <div id="edit-search-api-views-fulltext-wrapper" class="views-exposed-widget views-widget-filter-search_api_views_fulltext custom-field-cat custom-field-cat-All custom-field-cat-heavy-vehicles" style="display:none;">
+                                                <div class="views-widget">
+                                                    <div class="control-group form-type-textfield form-item-search-api-views-fulltext form-item">
+                                                        <div class="controls">
+                                                            <select name="custom_fields[]" class="form-select autoHide hide-heavy-vehicles" style="display: none;">
+                                                                <option value="">Company...</option>
+                                                                <option value="Honda">Honda</option>
+                                                                <option value=" Toyota"> Toyota</option>
+                                                                <option value=" Suzuki"> Suzuki</option>
+                                                                <option value=" Hyndai"> Hyndai</option>
+                                                                <option value=" Mercedez"> Mercedez</option>
+                                                                <option value=" BMW"> BMW</option>
+                                                                <option value=" Telsa"> Telsa</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--End DropDown Type -->
+                                            <!--Start Checkbox-->
+                                            <!--End Checkbox-->
+                                            <!--End Text Type -->
+                                            <!--Start DropDown Type -->
+                                            <!--End DropDown Type -->
+                                            <!--Start Checkbox-->
+                                            <!--End Checkbox-->
+                                            <!--End Text Type -->
+                                            <!--Start DropDown Type -->
+                                            <!--End DropDown Type -->
+                                            <!--Start Checkbox-->
+                                            <!--End Checkbox-->
+                                            <!--End Text Type -->
+                                            <!--Start DropDown Type -->
+                                            <!--End DropDown Type -->
+                                            <!--Start Checkbox-->
+                                            <!--End Checkbox-->
+                                            <!--End Text Type -->
+                                            <!--Start DropDown Type -->
+                                            <!--End DropDown Type -->
+                                            <!--Start Checkbox-->
+                                            <!--End Checkbox-->
+                                            <div id="edit-search-api-views-fulltext-wrapper" class="views-exposed-widget views-widget-filter-search_api_views_fulltext custom-field-cat custom-field-cat-All custom-field-cat-tv-and-lcd" style="display:none;">
+                                                <div class="views-widget">
+                                                    <div class="control-group form-type-textfield form-item-search-api-views-fulltext form-item">
+                                                        <div class="controls">
+                                                            <select name="custom_fields[]" class="form-select autoHide hide-tv-and-lcd" style="display: none;">
+                                                                <option value="">Color...</option>
+                                                                <option value="Color">Color</option>
+                                                                <option value="Color">Color</option>
+                                                                <option value="Color">Color</option>
+                                                                <option value="Color">Color</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="edit-search-api-views-fulltext-wrapper" class="views-exposed-widget views-widget-filter-search_api_views_fulltext custom-field-cat custom-field-cat-All custom-field-cat-tv-and-lcd" style="display:none;">
+                                                <div class="views-widget">
+                                                    <div class="control-group form-type-textfield form-item-search-api-views-fulltext form-item">
+                                                        <div class="controls">
+                                                            <select name="custom_fields[]" class="form-select autoHide hide-tv-and-lcd" style="display: none;">
+                                                                <option value="">Model...</option>
+                                                                <option value="Model">Model</option>
+                                                                <option value="Model">Model</option>
+                                                                <option value="Model">Model</option>
+                                                                <option value="Model">Model</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--End Text Type -->
+                                            <!--Start DropDown Type -->
+                                            <div id="edit-search-api-views-fulltext-wrapper" class="views-exposed-widget views-widget-filter-search_api_views_fulltext custom-field-cat custom-field-cat-All custom-field-cat-tv-and-lcd" style="display:none;">
+                                                <div class="views-widget">
+                                                    <div class="control-group form-type-textfield form-item-search-api-views-fulltext form-item">
+                                                        <div class="controls">
+                                                            <select name="custom_fields[]" class="form-select autoHide hide-tv-and-lcd" style="display: none;">
+                                                                <option value="">Company...</option>
+                                                                <option value="LG">LG</option>
+                                                                <option value=" Sony"> Sony</option>
+                                                                <option value=" Samsung"> Samsung</option>
+                                                                <option value=" Orient"> Orient</option>
+                                                                <option value=" Haier"> Haier</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--End DropDown Type -->
+                                            <!--Start Checkbox-->
+                                            <!--End Checkbox-->
+                                            <!--End Text Type -->
+                                            <!--Start DropDown Type -->
+                                            <!--End DropDown Type -->
+                                            <!--Start Checkbox-->
+                                            <!--End Checkbox-->
+                                            <div id="edit-search-api-views-fulltext-wrapper" class="views-exposed-widget views-widget-filter-search_api_views_fulltext custom-field-cat custom-field-cat-All custom-field-cat-design-code" style="display:none;">
+                                                <div class="views-widget">
+                                                    <div class="control-group form-type-textfield form-item-search-api-views-fulltext form-item">
+                                                        <div class="controls">
+                                                            <select name="custom_fields[]" class="form-select autoHide hide-design-code" style="display: none;">
+                                                                <option value="">Time...</option>
+                                                                <option value="10Am to 5Pm">10Am to 5Pm</option>
+                                                                <option value="10Am to 5Pm">10Am to 5Pm</option>
+                                                                <option value="8">8</option>
+                                                                <option value="Time">Time</option>
+                                                                <option value="5">5</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="edit-search-api-views-fulltext-wrapper" class="views-exposed-widget views-widget-filter-search_api_views_fulltext custom-field-cat custom-field-cat-All custom-field-cat-design-code" style="display:none;">
+                                                <div class="views-widget">
+                                                    <div class="control-group form-type-textfield form-item-search-api-views-fulltext form-item">
+                                                        <div class="controls">
+                                                            <select name="custom_fields[]" class="form-select autoHide hide-design-code" style="display: none;">
+                                                                <option value="">Duration...</option>
+                                                                <option value="7 Hours">7 Hours</option>
+                                                                <option value="7 Hours">7 Hours</option>
+                                                                <option value="4">4</option>
+                                                                <option value="Duration">Duration</option>
+                                                                <option value="6">6</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--End Text Type -->
+                                            <!--Start DropDown Type -->
+                                            <div id="edit-search-api-views-fulltext-wrapper" class="views-exposed-widget views-widget-filter-search_api_views_fulltext custom-field-cat custom-field-cat-All custom-field-cat-design-code" style="display:none;">
+                                                <div class="views-widget">
+                                                    <div class="control-group form-type-textfield form-item-search-api-views-fulltext form-item">
+                                                        <div class="controls">
+                                                            <select name="custom_fields[]" class="form-select autoHide hide-design-code" style="display: none;">
+                                                                <option value="">Type...</option>
+                                                                <option value="Full Time">Full Time</option>
+                                                                <option value=" Part Time"> Part Time</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="edit-search-api-views-fulltext-wrapper" class="views-exposed-widget views-widget-filter-search_api_views_fulltext custom-field-cat custom-field-cat-All custom-field-cat-design-code" style="display:none;">
+                                                <div class="views-widget">
+                                                    <div class="control-group form-type-textfield form-item-search-api-views-fulltext form-item">
+                                                        <div class="controls">
+                                                            <select name="custom_fields[]" class="form-select autoHide hide-design-code" style="display: none;">
+                                                                <option value="">Experience...</option>
+                                                                <option value="1 Year">1 Year</option>
+                                                                <option value=" 2 Year"> 2 Year</option>
+                                                                <option value=" 3 Year"> 3 Year</option>
+                                                                <option value=" Fresh"> Fresh</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--End DropDown Type -->
+                                            <!--Start Checkbox-->
+                                            <!--End Checkbox-->
+                                            <!--End Text Type -->
+                                            <!--Start DropDown Type -->
+                                            <!--End DropDown Type -->
+                                            <!--Start Checkbox-->
+                                            <!--End Checkbox-->
+                                            <div id="edit-search-api-views-fulltext-wrapper" class="views-exposed-widget views-widget-filter-search_api_views_fulltext custom-field-cat custom-field-cat-All custom-field-cat-van-trucks" style="display:none;">
+                                                <div class="views-widget">
+                                                    <div class="control-group form-type-textfield form-item-search-api-views-fulltext form-item">
+                                                        <div class="controls">
+                                                            <select name="custom_fields[]" class="form-select autoHide hide-van-trucks" style="display: none;">
+                                                                <option value="">Model...</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="edit-search-api-views-fulltext-wrapper" class="views-exposed-widget views-widget-filter-search_api_views_fulltext custom-field-cat custom-field-cat-All custom-field-cat-van-trucks" style="display:none;">
+                                                <div class="views-widget">
+                                                    <div class="control-group form-type-textfield form-item-search-api-views-fulltext form-item">
+                                                        <div class="controls">
+                                                            <select name="custom_fields[]" class="form-select autoHide hide-van-trucks" style="display: none;">
+                                                                <option value="">Year...</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--End Text Type -->
+                                            <!--Start DropDown Type -->
+                                            <div id="edit-search-api-views-fulltext-wrapper" class="views-exposed-widget views-widget-filter-search_api_views_fulltext custom-field-cat custom-field-cat-All custom-field-cat-van-trucks" style="display:none;">
+                                                <div class="views-widget">
+                                                    <div class="control-group form-type-textfield form-item-search-api-views-fulltext form-item">
+                                                        <div class="controls">
+                                                            <select name="custom_fields[]" class="form-select autoHide hide-van-trucks" style="display: none;">
+                                                                <option value="">Company...</option>
+                                                                <option value="Honda">Honda</option>
+                                                                <option value=" Toyota"> Toyota</option>
+                                                                <option value=" Suzuki"> Suzuki</option>
+                                                                <option value=" Hyndai"> Hyndai</option>
+                                                                <option value=" Mercedez"> Mercedez</option>
+                                                                <option value=" BMW"> BMW</option>
+                                                                <option value=" Telsa"> Telsa</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--End DropDown Type -->
+                                            <!--Start Checkbox-->
+                                            <!--End Checkbox-->
+                                            <!--End Text Type -->
+                                            <!--Start DropDown Type -->
+                                            <!--End DropDown Type -->
+                                            <!--Start Checkbox-->
+                                            <!--End Checkbox-->
+                                            <!--End Text Type -->
+                                            <!--Start DropDown Type -->
+                                            <!--End DropDown Type -->
+                                            <!--Start Checkbox-->
+                                            <!--End Checkbox-->
+                                            <!--End Text Type -->
+                                            <!--Start DropDown Type -->
+                                            <!--End DropDown Type -->
+                                            <!--Start Checkbox-->
+                                            <!--End Checkbox-->
+                                            <!--End Text Type -->
+                                            <!--Start DropDown Type -->
+                                            <!--End DropDown Type -->
+                                            <!--Start Checkbox-->
+                                            <!--End Checkbox-->
+                                            <!--End Text Type -->
+                                            <!--Start DropDown Type -->
+                                            <!--End DropDown Type -->
+                                            <!--Start Checkbox-->
+                                            <!--End Checkbox-->
+                                            <div id="edit-search-api-views-fulltext-wrapper" class="views-exposed-widget views-widget-filter-search_api_views_fulltext custom-field-cat custom-field-cat-All custom-field-cat-finance-jobs" style="display:none;">
+                                                <div class="views-widget">
+                                                    <div class="control-group form-type-textfield form-item-search-api-views-fulltext form-item">
+                                                        <div class="controls">
+                                                            <select name="custom_fields[]" class="form-select autoHide hide-finance-jobs" style="display: none;">
+                                                                <option value="">Time...</option>
+                                                                <option value="Time">Time</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="edit-search-api-views-fulltext-wrapper" class="views-exposed-widget views-widget-filter-search_api_views_fulltext custom-field-cat custom-field-cat-All custom-field-cat-finance-jobs" style="display:none;">
+                                                <div class="views-widget">
+                                                    <div class="control-group form-type-textfield form-item-search-api-views-fulltext form-item">
+                                                        <div class="controls">
+                                                            <select name="custom_fields[]" class="form-select autoHide hide-finance-jobs" style="display: none;">
+                                                                <option value="">Duration...</option>
+                                                                <option value="Duration">Duration</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--End Text Type -->
+                                            <!--Start DropDown Type -->
+                                            <div id="edit-search-api-views-fulltext-wrapper" class="views-exposed-widget views-widget-filter-search_api_views_fulltext custom-field-cat custom-field-cat-All custom-field-cat-finance-jobs" style="display:none;">
+                                                <div class="views-widget">
+                                                    <div class="control-group form-type-textfield form-item-search-api-views-fulltext form-item">
+                                                        <div class="controls">
+                                                            <select name="custom_fields[]" class="form-select autoHide hide-finance-jobs" style="display: none;">
+                                                                <option value="">Type...</option>
+                                                                <option value="Full Time">Full Time</option>
+                                                                <option value=" Part Time"> Part Time</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="edit-search-api-views-fulltext-wrapper" class="views-exposed-widget views-widget-filter-search_api_views_fulltext custom-field-cat custom-field-cat-All custom-field-cat-finance-jobs" style="display:none;">
+                                                <div class="views-widget">
+                                                    <div class="control-group form-type-textfield form-item-search-api-views-fulltext form-item">
+                                                        <div class="controls">
+                                                            <select name="custom_fields[]" class="form-select autoHide hide-finance-jobs" style="display: none;">
+                                                                <option value="">Experience...</option>
+                                                                <option value="1 Year">1 Year</option>
+                                                                <option value=" 2 Year"> 2 Year</option>
+                                                                <option value=" 3 Year"> 3 Year</option>
+                                                                <option value=" Fresh"> Fresh</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--End DropDown Type -->
+                                            <!--Start Checkbox-->
+                                            <!--End Checkbox-->
+                                            <!--End Text Type -->
+                                            <!--Start DropDown Type -->
+                                            <!--End DropDown Type -->
+                                            <!--Start Checkbox-->
+                                            <!--End Checkbox-->
+                                            <!--End Text Type -->
+                                            <!--Start DropDown Type -->
+                                            <!--End DropDown Type -->
+                                            <!--Start Checkbox-->
+                                            <!--End Checkbox-->
+                                            <!--End Text Type -->
+                                            <!--Start DropDown Type -->
+                                            <!--End DropDown Type -->
+                                            <!--Start Checkbox-->
+                                            <!--End Checkbox-->
+                                            <!--End Text Type -->
+                                            <!--Start DropDown Type -->
+                                            <!--End DropDown Type -->
+                                            <!--Start Checkbox-->
+                                            <!--End Checkbox-->
+                                            <!--End Text Type -->
+                                            <!--Start DropDown Type -->
+                                            <!--End DropDown Type -->
+                                            <!--Start Checkbox-->
+                                            <!--End Checkbox-->
+                                            <!--End Text Type -->
+                                            <!--Start DropDown Type -->
+                                            <!--End DropDown Type -->
+                                            <!--Start Checkbox-->
+                                            <!--End Checkbox-->
+                                            <!--End Text Type -->
+                                            <!--Start DropDown Type -->
+                                            <!--End DropDown Type -->
+                                            <!--Start Checkbox-->
+                                            <!--End Checkbox-->
+                                            <!--End Text Type -->
+                                            <!--Start DropDown Type -->
+                                            <!--End DropDown Type -->
+                                            <!--Start Checkbox-->
+                                            <!--End Checkbox-->
+                                            <!--End Text Type -->
+                                            <!--Start DropDown Type -->
+                                            <!--End DropDown Type -->
+                                            <!--Start Checkbox-->
+                                            <!--End Checkbox-->
+                                            <!--End Text Type -->
+                                            <!--Start DropDown Type -->
+                                            <!--End DropDown Type -->
+                                            <!--Start Checkbox-->
+                                            <!--End Checkbox-->
+
+
+                                            <input class="search-submit round button expand" type="submit" value="Search" name="">
+
+                                        </form>
+                                    </div><!--End advSearch-->
+                                </div><!--End WidgetContent-->
+                            </div>
+                        </div><div class="large-12 medium-6 columns medium-centered">
+                            <div class="widgetBox">
+                                <h4>Premium Ads</h4><div class="widgetContent">
+                                    <div class="premiumAds">
+                                        <div class="premiumAdvs">
+
+
+
+                                            <div class="Advimg">
+                                                <img class="abc" src="http://demo.joinwebs.com/classiera/wp-content/uploads/2015/12/tab-01-86x86.jpg" alt="Image" />
+                                                <div class="hover">
+                                                    <a href="http://demo.joinwebs.com/classiera/latest-tab-for-sale/"><span>$500</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="premiumAds">
+                                        <div class="premiumAdvs">
+
+
+
+                                            <div class="Advimg">
+                                                <img class="abc" src="http://demo.joinwebs.com/classiera/wp-content/uploads/2015/12/01-18-86x86.jpg" alt="Image" />
+                                                <div class="hover">
+                                                    <a href="http://demo.joinwebs.com/classiera/photography-services/"><span>$500</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="premiumAds">
+                                        <div class="premiumAdvs">
+
+
+
+                                            <div class="Advimg">
+                                                <img class="abc" src="http://demo.joinwebs.com/classiera/wp-content/uploads/2015/12/01-17-86x86.jpg" alt="Image" />
+                                                <div class="hover">
+                                                    <a href="http://demo.joinwebs.com/classiera/cute-puppy-for-sales/"><span>$500</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="premiumAds">
+                                        <div class="premiumAdvs">
+
+
+
+                                            <div class="Advimg">
+                                                <img class="abc" src="http://demo.joinwebs.com/classiera/wp-content/uploads/2015/12/01-16-86x86.jpg" alt="Image" />
+                                                <div class="hover">
+                                                    <a href="http://demo.joinwebs.com/classiera/designing-jobs/"><span>$1500</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="premiumAds">
+                                        <div class="premiumAdvs">
+
+
+
+                                            <div class="Advimg">
+                                                <img class="abc" src="http://demo.joinwebs.com/classiera/wp-content/uploads/2015/12/Mens-01-86x86.jpg" alt="Image" />
+                                                <div class="hover">
+                                                    <a href="http://demo.joinwebs.com/classiera/mens-accessories/"><span>$500</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="premiumAds">
+                                        <div class="premiumAdvs">
+
+
+
+                                            <div class="Advimg">
+                                                <img class="abc" src="http://demo.joinwebs.com/classiera/wp-content/uploads/2015/12/car-01-86x86.jpg" alt="Image" />
+                                                <div class="hover">
+                                                    <a href="http://demo.joinwebs.com/classiera/classic-car-for-sale/"><span>$2500</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>		<div class="large-12 medium-6 columns medium-centered">
+                            <div class="widgetBox">
+                                <div class="widgetTitle">
+                                    <i class="fa fa-align-justify"></i>
+                                    <h4>All Categories</h4>
+                                </div><!-- End Title -->
+                                <div class="widgetContent">
+                                    <div class="cats">
+                                        <ul>
+
+                                            <li>
+
+                                                <a href="http://demo.joinwebs.com/classiera/category/electronics/" title="View posts in Electronics">
+                                                    <i style="background:#72a0d9;" class="fa fa-desktop"></i>
+                                                    Electronics																				<span class="category-counter">(13)</span>
+                                                </a>
+
+
+                                            </li>
+
+                                            <li>
+
+                                                <a href="http://demo.joinwebs.com/classiera/category/jobs/" title="View posts in Jobs">
+                                                    <i style="background:#d4849f;" class="fa fa-black-tie"></i>
+                                                    Jobs																				<span class="category-counter">(8)</span>
+                                                </a>
+
+
+                                            </li>
+
+                                            <li>
+
+                                                <a href="http://demo.joinwebs.com/classiera/category/vehicles/" title="View posts in Vehicles">
+                                                    <i style="background:#a676b8;" class="fa fa-car"></i>
+                                                    Vehicles																				<span class="category-counter">(7)</span>
+                                                </a>
+
+
+                                            </li>
+
+                                            <li>
+
+                                                <a href="http://demo.joinwebs.com/classiera/category/real-estate/" title="View posts in Real Estate">
+                                                    <i style="background:#db3b30;" class="fa fa-home"></i>
+                                                    Real Estate																				<span class="category-counter">(7)</span>
+                                                </a>
+
+
+                                            </li>
+
+                                            <li>
+
+                                                <a href="http://demo.joinwebs.com/classiera/category/restaurants/" title="View posts in Restaurants">
+                                                    <i style="background:#ffd27d;" class="fa fa-coffee"></i>
+                                                    Restaurants																				<span class="category-counter">(5)</span>
+                                                </a>
+
+
+                                            </li>
+
+                                            <li>
+
+                                                <a href="http://demo.joinwebs.com/classiera/category/pets/" title="View posts in Pets">
+                                                    <i style="background:#4bb38b;" class="fa fa-github-alt"></i>
+                                                    Pets																				<span class="category-counter">(3)</span>
+                                                </a>
+
+
+                                            </li>
+
+                                            <li>
+
+                                                <a href="http://demo.joinwebs.com/classiera/category/services/" title="View posts in Services">
+                                                    <i style="background:#435c70;" class="fa fa-wrench"></i>
+                                                    Services																				<span class="category-counter">(8)</span>
+                                                </a>
+
+
+                                            </li>
+
+                                            <li>
+
+                                                <a href="http://demo.joinwebs.com/classiera/category/hotel-travels/" title="View posts in Hotel &amp; Travels">
+                                                    <i style="background:#e89e09;" class="fa fa-plane"></i>
+                                                    Hotel &amp; Travels																				<span class="category-counter">(3)</span>
+                                                </a>
+
+
+                                            </li>
+                                        </ul>
+                                    </div><!-- End cats -->
+                                </div><!-- End widgetContent -->
+
+                            </div>
+                        </div>
+                        <div class="large-12 medium-6 columns medium-centered">
+                            <div class="widgetBox">
+                                <div class="widgetTitle">
+                                    <i class="fa fa-share-alt"></i>
+                                    <h4>Subscribe &#038; Follow</h4>
+                                </div>
+
+                                <div class="widgetContent">
+                                    <div class="socialShare">
+                                        <ul class="inline-list">
+                                            <li><a href="http://www.facebook.com/joinwebs" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a href="http://www.twitter.com/joinwebs" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a href="http://www.facebook.com/joinwebs" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+
+                                            <li><a href="http://www.facebook.com/joinwebs" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                                            <li><a href="http://www.facebook.com/joinwebs" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div><div class="large-12 medium-6 columns medium-centered">
+                            <div class="widgetBox">
+                                <h4>Latest Ads</h4><div class="widgetContent">
+                                    <div class="recentPosts">
+                                        <div class="recentPost">
+
+
+
+                                            <a href="http://demo.joinwebs.com/classiera/hbuh/">
+                                                <div class="content shabir">
+                                                    <img src="http://demo.joinwebs.com/classiera/wp-content/themes/classiera/images/nothumb/nothumb86.png" alt="No Thumb" />
+                                                </div>
+                                            </a>
+                                            <div class="content">
+                                                <h5><a href="http://demo.joinwebs.com/classiera/hbuh/">Private: hbuh</a></h5>
+                                                <p class="add-posted">Posted on:&nbsp; 16 May, 2017</p>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="recentPosts">
+                                        <div class="recentPost">
+
+
+
+                                            <a href="">
+                                                <div class="content shabir">
+                                                    <img src="http://demo.joinwebs.com/classiera/wp-content/uploads/2017/05/action-1853289-70x70.jpg" alt="image" />
+                                                </div>
+                                            </a>
+                                            <div class="content">
+                                                <h5><a href="http://demo.joinwebs.com/classiera/air-max-95/">Private: Air Max 95</a></h5>
+                                                <p class="add-posted">Posted on:&nbsp; 14 May, 2017</p>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="recentPosts">
+                                        <div class="recentPost">
+
+
+
+                                            <a href="http://demo.joinwebs.com/classiera/%d9%84%d9%84%d8%a8%d9%8a%d8%b9-%d8%b3%d9%8a%d8%a7%d8%b1%d8%a9-%d9%85%d8%aa%d8%b3%d9%88%d8%a8%d9%8a%d8%b4%d9%8a-%d9%84%d8%a7%d9%86%d8%b3%d8%b1/">
+                                                <div class="content shabir">
+                                                    <img src="http://demo.joinwebs.com/classiera/wp-content/themes/classiera/images/nothumb/nothumb86.png" alt="No Thumb" />
+                                                </div>
+                                            </a>
+                                            <div class="content">
+                                                <h5><a href="http://demo.joinwebs.com/classiera/%d9%84%d9%84%d8%a8%d9%8a%d8%b9-%d8%b3%d9%8a%d8%a7%d8%b1%d8%a9-%d9%85%d8%aa%d8%b3%d9%88%d8%a8%d9%8a%d8%b4%d9%8a-%d9%84%d8%a7%d9%86%d8%b3%d8%b1/">Private: للبيع سيارة...</a></h5>
+                                                <p class="add-posted">Posted on:&nbsp; 13 May, 2017</p>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><div class="large-12 medium-6 columns medium-centered">
+                            <div class="widgetBox">
+                                <h4>Tags</h4><div class="tagcloud">
+                                    <a href='http://demo.joinwebs.com/classiera/tag/ads/' class='tag-link-58 tag-link-position-1' title='16 topics' style='font-size: 22pt;'>ads</a>
+                                    <a href='http://demo.joinwebs.com/classiera/tag/blog/' class='tag-link-72 tag-link-position-2' title='5 topics' style='font-size: 15.225806451613pt;'>blog</a>
+                                    <a href='http://demo.joinwebs.com/classiera/tag/blog-post/' class='tag-link-71 tag-link-position-3' title='5 topics' style='font-size: 15.225806451613pt;'>blog post</a>
+                                    <a href='http://demo.joinwebs.com/classiera/tag/blogs/' class='tag-link-70 tag-link-position-4' title='1 topic' style='font-size: 8pt;'>blogs</a>
+                                    <a href='http://demo.joinwebs.com/classiera/tag/foods/' class='tag-link-62 tag-link-position-5' title='3 topics' style='font-size: 12.516129032258pt;'>foods</a>
+                                    <a href='http://demo.joinwebs.com/classiera/tag/laptop/' class='tag-link-11 tag-link-position-6' title='1 topic' style='font-size: 8pt;'>laptop</a>
+                                    <a href='http://demo.joinwebs.com/classiera/tag/sale/' class='tag-link-76 tag-link-position-7' title='1 topic' style='font-size: 8pt;'>sale</a>
+                                    <a href='http://demo.joinwebs.com/classiera/tag/sales/' class='tag-link-13 tag-link-position-8' title='1 topic' style='font-size: 8pt;'>sales</a>
+                                    <a href='http://demo.joinwebs.com/classiera/tag/services/' class='tag-link-60 tag-link-position-9' title='1 topic' style='font-size: 8pt;'>services</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+            <!-- Sidebar End -->
+        </div><!--End Row -->
+    </section><!-- End advertisement -->
+    <script>
+                                                jQuery(document).ready(function () {
+                                                    jQuery('#post_location').on('change', function (e) {
+                                                        jQuery(".chosen-select").val('').trigger("chosen:updated");
+                                                        var data = {
+                                                            'action': 'get_states_of_country',
+                                                            'CID': jQuery(this).val()
+                                                        };
+
+                                                        // since 2.8 ajaxurl is always defined in the admin header and points to admin-ajax.php
+                                                        jQuery.post(ajaxurl, data, function (response) {
+                                                            if (jQuery("#post_state").length > 0) {
+                                                                jQuery("#post_state").html(response);
+
+                                                            }
+                                                        });
+                                                    });
+                                                    jQuery('#post_state').change(function (e) {
+                                                        jQuery(".chosen-select").val('').trigger("chosen:updated");
+                                                        var data = {
+                                                            'action': 'get_city_of_states',
+                                                            'ID': jQuery(this).val()
+                                                        };
+
+                                                        // since 2.8 ajaxurl is always defined in the admin header and points to admin-ajax.php
+                                                        jQuery.post(ajaxurl, data, function (response) {
+                                                            if (jQuery("#post_city").length > 0) {
+                                                                jQuery("#post_city").html(response);
+                                                            }
+                                                        });
+                                                    });
+
+                                                    jQuery('#post').validate();
+                                                    jQuery("#post_location2").chosen();
+                                                });
+    </script>
+    <script src="~/js/submitAd.js"></script>
+</section>

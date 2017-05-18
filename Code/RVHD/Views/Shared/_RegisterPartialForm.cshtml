@@ -1,0 +1,99 @@
+﻿<button type="button" class="close" data-dismiss="modal"><i class="fa fa-times"></i></button>
+<h4>Register</h4>
+
+    <div class="row">
+        <div class="col-md-6">
+            <label for="register-username">Username</label>
+            <input type="text" name="username" id="username" class="form-control" />
+        </div>
+        <div class="col-md-6">
+            <label for="register-email">Email</label>
+            <input type="text" name="email" id="email" class="form-control" />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <label for="register-password">Password</label>
+            <input type="password" name="password" id="password" class="form-control" />
+        </div>
+        <div class="col-md-6">
+            <label for="register-password-repeat">Repeat Password</label>
+            <input type="password" name="password-repeat" id="password-repeat" class="form-control" />
+        </div>
+    </div>
+    <input type="button" id="btn_register" name="btn_register" class="btn submit" value="REGISTER" />
+    or 					<a href="javascript:;" class="register-close-login" data-dismiss="modal">login here</a>
+    <div id="error" style="color: red;"></div><div id="ok" style="color: green"></div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <h4>Social register</h4>
+            <p>Use your social network profiles to login</p>
+        </div>
+        <div class="col-md-6 text-right">
+
+            <div class="social_connect_ui ">
+                <div class="social_connect_form">
+                    <a href="javascript:void(0);" title="Facebook" class="social_connect_login_facebook"><i class="fa fa-facebook"></i></a>				<a href="javascript:void(0);" title="Twitter" class="social_connect_login_twitter"><i class="fa fa-twitter"></i></a>				<a href="javascript:void(0);" title="Google+" class="social_connect_login_google_plus"><i class="fa fa-google-plus"></i></a>
+                </div>
+
+                <div class="social_connect_facebook_auth">
+                    <input type="hidden" name="client_id" value="762729693769983" />
+                    <input type="hidden" name="redirect_uri" value="http://demo.powerthemes.club/themes/classifieds/index.php?social-connect=facebook-callback" />
+                </div>
+
+                <div class="social_connect_twitter_auth"><input type="hidden" name="redirect_uri" value="http://demo.powerthemes.club/themes/classifieds/index.php?social-connect=twitter" /></div>
+                <div class="social_connect_google_plus_auth"><input type="hidden" name="redirect_uri" value="http://demo.powerthemes.club/themes/classifieds/index.php?social-connect=google-plus" /></div>
+
+            </div> <!-- End of social_connect_ui div -->
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#btn_register").click(function () {
+                var username = $("#username").val();
+                var email = $("#email").val();
+                var password = $("#password").val();
+                var passwordRepeat = $("#password-repeat").val();
+                var error = $("#error");
+                var ok = $("#ok");
+                $("#ok").html("Register in...");
+                var data = {
+                    "username": $("#username").val(),
+                    "email": $("#email").val(),
+                    "password": $("#password").val(),
+                };
+                // resert 2 thẻ div thông báo trở về rỗng mỗi khi click nút đăng nhập
+                error.html("");
+                //ok.html("");
+
+                // Kiểm tra nếu username rỗng thì báo lỗi
+                if (username == "") {
+                    error.html("Tên đăng nhập không được để trống");
+                    return false;
+                }
+                // Kiểm tra nếu password rỗng thì báo lỗi
+                if (password == "") {
+                    error.html("Mật khẩu không được để trống");
+                    return false;
+                }
+                $.ajax({
+                    url: "/account/RegisterJson",
+                    type: "POST",    
+                    data: JSON.stringify(data),
+                    dataType: "json",
+                    contentType: "application/json",
+                    success: function (status) {
+                        $("#ok").html(status.Message);
+                        if (status.Success) {
+                            window.location.href = status.TargetURL;
+                        }
+                    },
+                    error: function () {
+                        $("#error").html("Error while authenticating user credentials!");
+                    }
+                });
+            });
+        });
+    </script>
